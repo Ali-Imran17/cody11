@@ -87,18 +87,20 @@ export default function aboutus() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
           <div className="relative group">
-
-            <div className="relative w-full aspect-square max-w-md mx-auto md:mx-0 rounded-t-full overflow-hidden bg-[#FF8D28] shadow-[0_0_50px_rgba(255,141,40,0.2)]">
-              <img 
-      src="/founder.png" 
-      alt="Founder Samuel"
-      className="absolute  left-1/2 -translate-x-1/2 w-170 max-w-none z-10 
-                 grayscale brightness-100 opacity-90 contrast-110
-                 transition-all duration-500 hover:grayscale-0"
-    />
-    <div className="absolute bottom-0 opacity-75 left-0 w-full h-24 bg-linear-to-t from-black to-transparent z-20"></div>
+<div className="relative w-full aspect-square max-w-md mx-auto md:mx-0 rounded-t-full overflow-hidden bg-[#FF8D28] shadow-[0_0_50px_rgba(255,141,40,0.2)]">
   
-            </div>
+  <img 
+    src="/founder.png" 
+    alt="Founder Samuel"
+    className="absolute bottom-0 left-1/2 -translate-x-1/2 
+               h-[100%] w-full object-contain
+               z-10 grayscale brightness-100 opacity-90 contrast-110
+               transition-all duration-500 hover:grayscale-0"
+  />
+
+  <div className="absolute bottom-0 opacity-75 left-0 w-full h-24 bg-gradient-to-t from-black to-transparent z-20"></div>
+
+</div>
           
           <div className="-mt-8 relative z-30 pointer-events-none">
     <h2 className="text-6xl md:text-6xl font-bold text-[#FF8D28] leading-[0.8] tracking-tighter uppercase">
@@ -287,15 +289,26 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
             </div>
 
             {/* Quick Links */}
-            <div className="text-center mx-auto md:text-left md:mx-0 md:ml-20">
-              <h4 className="text-[#FF8D28] font-bold mb-6 tracking-widest text-2xl">Quick Links</h4>
-              <div className="space-y-2 text-sm font-bold -mt-2 grid text-white justify-center md:justify-start">
-                <Link href='/aboutus' className="hover:text-[#ff8d28] transition-colors">About Us</Link>
-                <Link href='/codycommerce' className="hover:text-[#ff8d28] transition-colors">Cody Commerce</Link>
-                <Link href='/pricing' className="hover:text-[#ff8d28] transition-colors">Pricing</Link>
-                <Link href='/contact' className="hover:text-[#ff8d28] transition-colors">Contact</Link>
-              </div>
-            </div>
+         <div className="text-center md:text-left mx-auto md:mx-0 md:ml-20">
+  <h4 className="text-[#FF8D28] font-bold mb-4 tracking-widest text-2xl">
+    Quick Links
+  </h4>
+
+  <div className="flex flex-col items-center md:items-start space-y-1 text-sm font-bold text-white">
+    <Link href="/aboutus" className="hover:text-[#ff8d28] transition-colors">
+      About Us
+    </Link>
+    <Link href="/codycommerce" className="hover:text-[#ff8d28] transition-colors">
+      Cody Commerce
+    </Link>
+    <Link href="/pricing" className="hover:text-[#ff8d28] transition-colors">
+      Pricing
+    </Link>
+    <Link href="/contact" className="hover:text-[#ff8d28] transition-colors">
+      Contact
+    </Link>
+  </div>
+</div>
 
            {/* Social Links */}
 <div className="flex justify-center md:justify-start items-center text-[#FF8D28]">

@@ -15,7 +15,7 @@ const Contact = () => {
 
     try {
       await fetch(
-        "https://script.google.com/macros/s/AKfycbxkfGwGFwH0N8QgvQUwg2UiPP7hMtA1OXXsgaADauY9lwnEpNFZJiqpDDwllN8AKpS32A/exec",
+        "https://script.google.com/macros/s/AKfycbz1n7sGgv4zD4XJU4dkxFPqzfkRXBmLk0xEC2n31qpgktxcbV-B9-HArLrwdKQWC7Hb/exec",
         {
           method: "POST",
           mode: "no-cors", // important
