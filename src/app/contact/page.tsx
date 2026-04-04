@@ -87,7 +87,7 @@ const Contact = () => {
             <input name="address" placeholder="Business Address" className="w-full p-3 bg-black/40 border border-white/20 rounded-lg"/>
             <input name="email" type="email" placeholder="Email Address" required className="w-full p-3 bg-black/40 border border-white/20 rounded-lg"/>
 
-            <textarea name="message" rows={4} placeholder="Your Message..." required className="w-full p-3 bg-black/40 border border-white/20 rounded-lg"></textarea>
+            <textarea name="message" rows={4} placeholder="Your Message..." className="w-full p-3 bg-black/40 border border-white/20 rounded-lg"></textarea>
 
             <button className="w-full bg-[#ff8d28] cursor-pointer text-black py-3 rounded-lg">
               Submit
