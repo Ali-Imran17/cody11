@@ -1,7 +1,6 @@
 "use client";
-
-import React, { useState, FormEvent } from 'react';
-import { FiTwitter, FiPhoneCall, FiLinkedin } from "react-icons/fi";
+import  { useState, FormEvent } from 'react';
+import {  FiPhoneCall, FiLinkedin } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 import Link from 'next/link';
 

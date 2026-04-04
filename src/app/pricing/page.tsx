@@ -1,10 +1,7 @@
-import React from 'react';
-import { FiTwitter, FiPhoneCall, FiLinkedin, FiChevronDown } from "react-icons/fi";
-import { LuFacebook } from "react-icons/lu";
-import { FaInstagram } from "react-icons/fa";
+
+import { FiPhoneCall, FiLinkedin,  } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 import Link from 'next/link';
-import Image from 'next/image';
 import { MdDoNotDisturbOn } from "react-icons/md";
 import { FaCheck } from 'react-icons/fa'
 
