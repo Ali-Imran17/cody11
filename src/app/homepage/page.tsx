@@ -22,35 +22,66 @@ export default function HomePage() {
           <Link href='/' className="absolute top-12 left-4 md:left-10 z-20 text-white font-black tracking-widest text-xl cursor-pointer">Cody</Link>
 
           {/* Navbar */}
-          <nav className="z-50 relative bg-neutral-900 backdrop-blur-2xl border border-white/30 px-4 md:px-8 py-3 rounded-full mb-16 shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]">
-            <input type="checkbox" id="menu-toggle" className="hidden peer " />
-            <div className="flex justify-between items-center">
-              <ul className="hidden md:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
-                <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
-                <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
-                <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
-                <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
-                <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
-              </ul>
-              <label htmlFor="menu-toggle" className="md:hidden ml-auto text-white text-2xl cursor-pointer">☰</label>
-            </div>
-            <div className="absolute left-1 top-16 w-52 bg-neutral-900 border border-white/20 rounded-2xl p-6 flex-col gap-4 text-white hidden peer-checked:flex md:hidden">
-              <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
-              <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
-              <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
-              <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
-              <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
-            </div>
-          </nav>
+          <nav className="
+  z-50 relative md:mx-auto ml-auto
+  w-fit
+  bg-neutral-900 backdrop-blur-2xl 
+  border border-white/30 
+  px-4 md:px-8 py-3 
+  rounded-full mb-16 
+  shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]
+">
+
+  <input type="checkbox" id="menu-toggle" className="hidden peer" />
+
+  <div className="flex justify-between items-center">
+    
+    {/* Desktop Menu */}
+    <ul className="hidden md:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
+      <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
+      <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
+      <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
+      <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
+      <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
+    </ul>
+
+    {/* Mobile Hamburger */}
+    <label 
+      htmlFor="menu-toggle" 
+      className="md:hidden ml-auto text-white text-2xl cursor-pointer"
+    >
+      ☰
+    </label>
+
+  </div>
+
+  {/* Mobile Dropdown */}
+  <div className="
+    absolute right-0 top-16   
+    w-52 
+    bg-neutral-900 
+    border border-white/20 
+    rounded-2xl p-6 
+    flex-col gap-4 text-white 
+    hidden peer-checked:flex md:hidden
+  ">
+    <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
+    <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
+    <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
+    <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
+    <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
+  </div>
+
+</nav>
 
           {/* Hero Brands */}
-         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-60 md:gap-79 lg:gap-110 mt-10 md:mt-20">
+         <div className="flex flex-wrap justify-center items-center gap-30 sm:gap-60 md:gap-79 lg:gap-110 mt-10 md:mt-20">
   
   <span className="bg-[#FF8D28] px-2 py-1 text-sm sm:text-base md:text-xl lg:text-2xl font-bold text-center">
     AMAZON
   </span>
 
-  <span className="bg-[#FF8D28] px-2 py-1 text-sm sm:text-base md:text-xl lg:text-2xl font-bold text-center">
+  <span className="bg-[#FF8D28] px-2 py-1  text-sm sm:text-base md:text-xl lg:text-2xl font-bold text-center">
     WALMART
   </span>
 
@@ -79,21 +110,44 @@ export default function HomePage() {
           </div>
 
           {/* Icon Flow */}
-       <div className="flex flex-row md:flex-row items-center justify-center gap-4 md:gap-12 py-10 px-4 flex-wrap">
+     <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 py-10 px-4">
   {["/growth img.png", "/checklist.png", "/earning.png"].map((img, idx) => (
     <React.Fragment key={idx}>
-      <div className="cursor-pointer transition-transform duration-350 hover:border-orange-500 hover:shadow-amber-600 hover:scale-105 
-        active:scale-95 p-6 h-30 md:h-52 w-22 md:w-44 shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)]
-        bg-[#1c130d]/90 backdrop-blur-md border border-gray-400/70 rounded-2xl flex items-center justify-center">
-        <Image src={img} alt={`icon-${idx}`} width={131} height={131} className="object-contain" />
+      
+      {/* Card */}
+      <div className="cursor-pointer transition-transform duration-300 
+        hover:border-orange-500 hover:shadow-amber-600 hover:scale-105 
+        active:scale-95 p-5 md:p-6 
+        h-28 w-28 md:h-52 md:w-44 
+        shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)]
+        bg-[#1c130d]/90 backdrop-blur-md 
+        border border-gray-400/70 rounded-2xl 
+        flex items-center justify-center">
+        
+        <Image 
+          src={img} 
+          alt={`icon-${idx}`} 
+          width={120} 
+          height={120} 
+          className="object-contain" 
+        />
       </div>
 
-      {/* Add arrow between icons except after the last one */}
+      {/* Arrows */}
       {idx < 2 && (
-        <span className="text-white text-4xl md:text-6xl  md:flex items-center justify-center">
-          ⟶
-        </span>
+        <>
+          {/* Desktop arrow (→ right) */}
+          <span className="hidden md:flex text-white text-5xl items-center justify-center">
+            ⟶
+          </span>
+
+          {/* Mobile arrow (↓ down) */}
+          <span className="flex md:hidden text-white text-3xl items-center justify-center rotate-90">
+            →
+          </span>
+        </>
       )}
+
     </React.Fragment>
   ))}
 </div>
@@ -131,23 +185,67 @@ export default function HomePage() {
                 Your dedicated team for eCommerce acceleration
               </h2>
             </div>
-           <div className="grid sm:grid-cols-1 md:grid-cols-2  gap-6 md:gap-16 lg:w-6xl w-80 mx-auto">
+         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 
+  gap-6 md:gap-10 lg:gap-16 
+  max-w-6xl mx-auto px-4 md:px-8">
+
   {[
     { id: '01', title: 'INTELLIGENCE', icon: '/intelligence.png', desc: 'We utilize advanced analytics to decode sales velocity, consumer intent, and category trends. This deep-dive intelligence allows us to deploy custom strategies that position your brand exactly where the demand is highest.' },
     { id: '02', title: 'CAPITAL', icon: '/earning.png', desc: 'We act as a strategic investor, fueling your operations through substantial wholesale purchase orders and funded advertising initiatives. Leveraging our extensive vendor network and history of $100M+ in revenue generation.' },   
     { id: '03', title: 'LOGISTICS', icon: '/logistic.png', desc: 'We transform your supply chain into a competitive advantage. Our infrastructure is engineered for speed, accuracy, and seamless scalability, ensuring your inventory moves efficiently from our docks to the customer’s door. We manage the entire lifecycle with advanced tracking systems that eliminate delays, no matter the product size.' },
     { id: '04', title: 'SUPPORT', icon: '/customer support.png', desc: 'We handle the complexities of returns and customer communication so you don’t have to. Our systems are designed to maximize uptime and minimize friction, ensuring seamless inventory flow and rapid shipping, giving you the freedom to scale without the operational noise.' },
   ].map((service) => (
+    
     <div key={service.id} className="relative group">
-      <div className="bg-[#121212] hover:shadow-[inset_0_8px_20px_rgba(255,255,255,0.2)] backdrop-blur-md border shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)] rounded-3xl w-full p-6 md:p-10 border-gray-400 group-hover:shadow-[0_0_50px_rgba(255,170,0,0.35)] group-hover:border-orange-500/60 cursor-pointer transition-transform duration-200 hover:scale-100 active:scale-95">
-        <div className="absolute shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)] bg-[#121212] backdrop-blur-md border border-gray-400/70 rounded-full -top-5 w-12 h-12 md:w-15 md:h-15 -left-5 flex items-center justify-center text-xl font-medium -rotate-12 text-white">{service.id}</div>
-        <div className="flex drop-shadow-amber-500 drop-shadow-sm justify-center mb-5">
-          <img src={service.icon} alt={service.title} className="w-20 md:w-32 h-20 md:h-32 object-contain" />
+      
+      <div className="bg-[#121212] backdrop-blur-md border 
+        border-gray-400 rounded-3xl 
+        p-5 sm:p-6 md:p-8 lg:p-10
+        shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)]
+        transition-all duration-300
+        hover:shadow-[0_0_40px_rgba(255,170,0,0.35)]
+        hover:border-orange-500/60 hover:scale-[1.02]
+        active:scale-95 cursor-pointer">
+
+        {/* ID Badge */}
+        <div className="absolute 
+          -top-4 -left-4 md:-top-5 md:-left-5
+          w-10 h-10 md:w-14 md:h-14
+          flex items-center justify-center
+          text-sm md:text-lg font-medium text-white
+          rounded-full border border-gray-400/70
+          bg-[#121212] -rotate-12
+          shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)]">
+          {service.id}
         </div>
-        <h3 className="text-white text-xl md:text-3xl text-center tracking-[0.25em] uppercase mb-4">{service.title}</h3>
-        <p className="text-white text-sm md:text-base text-center leading-relaxed mt-4 md:mt-8">{service.desc}</p>
+
+        {/* Icon */}
+        <div className="flex justify-center mb-4 md:mb-6">
+          <img 
+            src={service.icon} 
+            alt={service.title} 
+            className="w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 object-contain"
+          />
+        </div>
+
+        {/* Title */}
+        <h3 className="text-white 
+          text-lg sm:text-xl md:text-2xl lg:text-3xl 
+          text-center tracking-widest uppercase mb-3 md:mb-4">
+          {service.title}
+        </h3>
+
+        {/* Description */}
+        <p className="text-white 
+          text-xs sm:text-sm md:text-base 
+          text-center leading-relaxed 
+          mt-2 md:mt-4">
+          {service.desc}
+        </p>
+
       </div>
     </div>
+
   ))}
 </div>
           </div>

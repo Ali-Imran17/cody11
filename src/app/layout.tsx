@@ -16,7 +16,7 @@ export const metadata = {
   title: "Codys Commerce",
   description: "Build and scale your eCommerce business with us.",
   openGraph: {
-    title: "Codys Commerce 🚀",
+    title: "Codys Commerce",
     description: "We help you launch and grow your online store.",
     url: "https://www.codyscommerce.com",
     siteName: "Codys Commerce",

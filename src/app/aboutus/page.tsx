@@ -4,6 +4,45 @@ import { CiMail } from "react-icons/ci";
 import Link from 'next/link';
 import Image from 'next/image';
 
+ const faqData = [
+    {
+      question: "Which marketplaces do you operate on?",
+      answer: "We primarily operate on Amazon, along with other major online marketplaces and retail distribution networks depending on the brand’s requirements."
+    },
+    {
+      question: "Do you work with international brands?",
+      answer: "Yes, we partner with both local and international brands looking to expand into new markets through reliable distribution and e-commerce strategies."
+    },
+    {
+      question: "What are the benefits of working with you?",
+      answer: "Increased online visibility Access to established distribution networks Professional Amazon account management Scalable sales growth Brand protection and consistency and profitability."
+    },
+    {
+      question: "Do you require exclusivity?",
+      answer: "Exclusivity depends on the brand and agreement terms. We are flexible and open to discussing mutually beneficial arrangements."
+    },
+    {
+      question: "How do you ensure brand protection on Amazon?",
+      answer: "We follow strict compliance policies, maintain MAP pricing where applicable, and work closely with brands to protect their identity and reputation."
+    },
+    {
+      question: "Can I track my brand's performance?",
+      answer: "Yes, we provide regular reports and insights on sales, performance, and growth."
+    },
+    {
+      question: "What makes you different from other sellers?",
+      answer: "We focus on long-term brand building, authorized partnerships, and data-driven growth strategies rather than short-term reselling."
+    },
+    {
+      question: "Why should I trust you with my brand?",
+      answer: "We have experience managing multiple brands, proven sales performance, and a strong supply chain network that ensures sustainable growth."
+    },
+    {
+      question: "Do you already work with established brands?",
+      answer: "Yes, we currently manage and distribute multiple brands across different categories, with a growing portfolio and proven results."
+    },
+  ];
+
 export default function aboutus() {
   return (
     <div className="relative min-h-screen transition-colors text-white font-sans selection:bg-orange-500/30 ">
@@ -28,38 +67,97 @@ export default function aboutus() {
           Cody
         </Link>
 
-    <nav className="z-50 relative bg-neutral-900 backdrop-blur-2xl border border-white/30 px-4 md:px-8 py-3 rounded-full mb-16 shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]">
-             <input type="checkbox" id="menu-toggle" className="hidden peer " />
-             <div className="flex justify-between items-center">
-               <ul className="hidden md:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
-                <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
-                <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
-                <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
-                <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
-                <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
-               </ul>
-               <label htmlFor="menu-toggle" className="md:hidden ml-auto text-white text-2xl cursor-pointer">☰</label>
-             </div>
-             <div className="absolute left-1 top-16 w-52 bg-neutral-900 border border-white/20 rounded-2xl p-6 flex-col gap-4 text-white hidden peer-checked:flex md:hidden">
-                <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
-                <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
-                <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
-                <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
-                <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
-             </div>
-           </nav>
+    <nav className="
+  z-50 relative md:mx-auto ml-auto
+  w-fit
+  bg-neutral-900 backdrop-blur-2xl 
+  border border-white/30 
+  px-4 md:px-8 py-3 
+  rounded-full mb-16 
+  shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]
+">
+
+  <input type="checkbox" id="menu-toggle" className="hidden peer" />
+
+  <div className="flex justify-between items-center">
+    
+    {/* Desktop Menu */}
+    <ul className="hidden md:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
+      <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
+      <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
+      <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
+      <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
+      <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
+    </ul>
+
+    {/* Mobile Hamburger */}
+    <label 
+      htmlFor="menu-toggle" 
+      className="md:hidden ml-auto text-white text-2xl cursor-pointer"
+    >
+      ☰
+    </label>
+
+  </div>
+
+  {/* Mobile Dropdown */}
+  <div className="
+    absolute right-0 top-16   
+    w-52 
+    bg-neutral-900 
+    border border-white/20 
+    rounded-2xl p-6 
+    flex-col gap-4 text-white 
+    hidden peer-checked:flex md:hidden
+  ">
+    <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
+    <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
+    <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
+    <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
+    <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
+  </div>
+
+</nav>
 </section>
 
-        <section className="pt-20 pb-32 px-4 text-center">
-          <div className="max-w-4xl mx-auto rounded-4xl overflow-hidden border border-white/10 shadow-2xl relative">
-           <Image src="/business-people-working-together-office-business-team-working-together-business-people-working-together_980226-10010.jpg" width={1179} height={786} alt="Team working" className="w-294 h-195 object-cover opacity-60" />
-            <div className="absolute inset-0 bg-linear-to-t from-[#0a0500] via-transparent to-transparent"></div>
-            <div className="absolute bottom-10  left-0 right-0">
-              <h1 className="text-3xl md:text-4xl ">Welcome to</h1>
-              <p className="text-[#FF8D28]  text-4xl mt-2 font-medium">Cody Commerce !</p>
-            </div>
-          </div>
-        </section>
+        <section className="pt-16 md:pt-20 pb-20 md:pb-32 px-4 text-center">
+  
+  <div className="max-w-4xl mx-auto rounded-3xl md:rounded-[2rem] 
+    overflow-hidden border border-white/10 shadow-2xl relative">
+
+    {/* Image */}
+    <Image 
+      src="/business-people-working-together-office-business-team-working-together-business-people-working-together_980226-10010.jpg"
+      width={1179} 
+      height={786} 
+      alt="Team working"
+      className="w-full h-[350px] sm:h-[450px] md:h-[500px] lg:h-[700px] 
+      object-cover opacity-60"
+    />
+
+    {/* Gradient Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t 
+      from-[#0a0500] via-transparent to-transparent"></div>
+
+    {/* Text */}
+    <div className="absolute bottom-4 sm:bottom-6 md:bottom-10 
+      left-0 right-0 px-4">
+
+      <h1 className="text-lg sm:text-2xl md:text-3xl text-white">
+        Welcome to
+      </h1>
+
+      <p className="text-[#FF8D28] 
+        text-2xl sm:text-3xl md:text-4xl 
+        mt-1 sm:mt-2 font-medium">
+        Cody Commerce !
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
     
    <section className="max-w-6xl mx-auto px-4 py-20 relative z-10">
@@ -164,7 +262,7 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
     gap-1 px-3 sm:px-4 py-2 rounded-full">
 
     <span className="text-sm sm:text-base">🔥</span>
-    <span className="text-white text-xs sm:text-sm md:text-base text-nowrap font-medium tracking-wide">
+    <span className="text-white text-xs sm:text-sm md:text-base font-medium tracking-wide">
       Passionate Mentor
     </span>
   </div>
@@ -176,7 +274,7 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
     gap-1 px-3 sm:px-4 py-2 rounded-full">
 
     <span className="text-sm sm:text-base">🤝</span>
-    <span className="text-white text-xs text-nowrap sm:text-sm md:text-base font-medium tracking-wide">
+    <span className="text-white text-xs  sm:text-sm md:text-base font-medium tracking-wide">
       Empathetic Leader
     </span>
   </div>
@@ -233,43 +331,51 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
 </div>
         </section>
         {/* FAQ List Section */}
-<section className="max-w-4xl mx-auto px-4 pb-20 relative z-10">
-  <div className="space-y-4">
-    {[
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit?"
-    ].map((question, i) => (
-      <div 
-        key={i} 
-        className="group border-neutral-700 border bg-linear-to-t from-orange-900/10 to-transparent text-gray-400 bg-neutral-900 p-5 rounded-4xl flex justify-between items-center cursor-pointer transition-all duration-300 hover:border-orange-500/50 hover:bg-neutral-800/60 shadow-[inset_0_1px_10px_rgba(255,255,255,0.05)]"
-      >
-        <span className="text-gray-200 font-medium tracking-wide">
-          {question}
-        </span>
-        
-        {/* The Orange Chevron Button from image */}
-        <div className="bg-[#FF8D28] p-2 rounded-lg text-black transition-transform duration-300 group-hover:scale-110">
-          <FiChevronDown size={20} />
-        </div>
-      </div>
-    ))}
-  </div>
+  <section className="max-w-4xl mx-auto px-4 pb-20 relative z-10">
+      <div className="space-y-4">
+        {faqData.map((faq, i) => (
+          <div key={i}>
+            {/* Hidden checkbox to control the dropdown */}
+            <input
+              type="checkbox"
+              id={`faq-${i}`}
+              className="peer hidden"
+            />
 
-  {/* Bottom Success Story CTA */}
-  <div className="mt-32 mb-10 text-center">
-    <p className="text-white text-lg md:text-lg max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
-      Partner with us today to transform your eCommerce strategy into <br className="hidden md:block" />
-      a <span className="text-gray-300 font-normal">scalable success story</span>
-    </p>
-    
-    {/* Subtle Orange Glow at the bottom of the text as seen in photo */}
-    <div className="w-40 h-1 bg-orange-500/40 blur-xl mx-auto mt-4"></div>
-  </div>
-</section>
+            {/* Question with dropdown icon */}
+            <label
+              htmlFor={`faq-${i}`}
+              className="group border-neutral-700 border bg-linear-to-t from-orange-900/10 to-transparent text-gray-400 bg-neutral-900 p-5 rounded-4xl flex justify-between items-center cursor-pointer transition-all duration-300 hover:border-orange-500/50 hover:bg-neutral-800/60 shadow-[inset_0_1px_10px_rgba(255,255,255,0.05)]"
+            >
+              <span className="text-gray-200 font-medium tracking-wide">
+                {faq.question}
+              </span>
+
+              {/* The Orange Chevron Button */}
+              <div className="bg-[#FF8D28] p-2 rounded-lg text-black transition-transform duration-300 group-hover:scale-110">
+                <FiChevronDown size={20} />
+              </div>
+            </label>
+
+            {/* The answer dropdown */}
+            <div className="peer-checked:block hidden mt-2 p-4 bg-neutral-800/80 rounded-xl text-gray-300">
+              <p>{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Bottom Success Story CTA */}
+      <div className="mt-32 mb-10 text-center">
+        <p className="text-white text-lg md:text-lg max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
+          Partner with us today to transform your eCommerce strategy into <br className="hidden md:block" />
+          a <span className="text-gray-300 font-normal">scalable success story</span>
+        </p>
+
+        {/* Subtle Orange Glow at the bottom of the text */}
+        <div className="w-40 h-1 bg-orange-500/40 blur-xl mx-auto mt-4"></div>
+      </div>
+    </section>
 </div>
 
         {/* FOOTER (Centered Underline Included) */}
