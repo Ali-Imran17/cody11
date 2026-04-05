@@ -79,18 +79,18 @@ export default function HomePage() {
           </div>
 
           {/* Icon Flow */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 py-10 px-4 flex-wrap">
+       <div className="flex flex-row md:flex-row items-center justify-center gap-4 md:gap-12 py-10 px-4 flex-wrap">
   {["/growth img.png", "/checklist.png", "/earning.png"].map((img, idx) => (
     <React.Fragment key={idx}>
       <div className="cursor-pointer transition-transform duration-350 hover:border-orange-500 hover:shadow-amber-600 hover:scale-105 
-        active:scale-95 p-6 h-48 md:h-52 w-40 md:w-44 shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)]
+        active:scale-95 p-6 h-30 md:h-52 w-22 md:w-44 shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)]
         bg-[#1c130d]/90 backdrop-blur-md border border-gray-400/70 rounded-2xl flex items-center justify-center">
         <Image src={img} alt={`icon-${idx}`} width={131} height={131} className="object-contain" />
       </div>
 
       {/* Add arrow between icons except after the last one */}
       {idx < 2 && (
-        <span className="text-white text-6xl hidden md:flex items-center justify-center">
+        <span className="text-white text-4xl md:text-6xl  md:flex items-center justify-center">
           ⟶
         </span>
       )}
@@ -131,26 +131,25 @@ export default function HomePage() {
                 Your dedicated team for eCommerce acceleration
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-8 md:gap-16 max-w-5xl mx-auto">
-              {[
-                { id: '01', title: 'INTELLIGENCE', icon: '/intelligence.png', desc: 'We utilize advanced analytics to decode sales velocity, consumer intent, and category trends. This deep-dive intelligence allows us to deploy custom strategies that position your brand exactly where the demand is highest.' },
-                { id: '02', title: 'CAPITAL', icon: '/earning.png', desc: 'We act as a strategic investor, fueling your operations through substantial wholesale purchase orders and funded advertising initiatives. Leveraging our extensive vendor network and history of $100M+ in revenue generation,' },   
-                { id: '03', title: 'LOGISTICS', icon: '/logistic.png', desc: 'We transform your supply chain into a competitive advantage. Our infrastructure is engineered for speed, accuracy, and seamless scalability, ensuring your inventory moves efficiently from our docks to the customer’s door. We manage the entire lifecycle with advanced tracking systems that eliminate delays, no matter the product size.' },
-                { id: '04', title: 'SUPPORT', icon: '/customer support.png', desc: 'We handles the complexities of returns and customer communication so you dont have to. Our systems are designed to maximize uptime and minimize friction, ensuring seamless inventory flow and rapid shipping. giving you the freedom to scale without the operational noise.' },
-              
-              ].map((service) => (
-                <div key={service.id} className="relative group">
-                  <div className="bg-[#121212] hover:shadow-[inset_0_8px_20px_rgba(255,255,255,0.2)] backdrop-blur-md border shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)] rounded-3xl w-full max-w-md md:w-125 md:h-125  p-6 md:p-10 border-gray-400 group-hover:shadow-[0_0_50px_rgba(255,170,0,0.35)] group-hover:border-orange-500/60 cursor-pointer transition-transform duration-200 hover:scale-100 active:scale-95">
-                    <div className="absolute shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)] bg-[#121212] backdrop-blur-md border border-gray-400/70 rounded-full -top-5 w-12 h-12 md:w-15 md:h-15 -left-5 flex items-center justify-center text-xl font-medium -rotate-12 text-white">{service.id}</div>
-                    <div className="flex drop-shadow-amber-500 drop-shadow-sm justify-center mb-5">
-                      <img src={service.icon} alt={service.title} className="w-20 md:w-32.5 h-20 md:h-32.5 object-contain" />
-                    </div>
-                    <h3 className="text-white text-xl md:text-3xl text-center tracking-[0.25em] uppercase mb-4">{service.title}</h3>
-                    <p className="text-white text-sm md:text-base text-center leading-relaxed mt-4 md:mt-8">{service.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+           <div className="grid sm:grid-cols-1 md:grid-cols-2  gap-6 md:gap-16 lg:w-6xl w-80 mx-auto">
+  {[
+    { id: '01', title: 'INTELLIGENCE', icon: '/intelligence.png', desc: 'We utilize advanced analytics to decode sales velocity, consumer intent, and category trends. This deep-dive intelligence allows us to deploy custom strategies that position your brand exactly where the demand is highest.' },
+    { id: '02', title: 'CAPITAL', icon: '/earning.png', desc: 'We act as a strategic investor, fueling your operations through substantial wholesale purchase orders and funded advertising initiatives. Leveraging our extensive vendor network and history of $100M+ in revenue generation.' },   
+    { id: '03', title: 'LOGISTICS', icon: '/logistic.png', desc: 'We transform your supply chain into a competitive advantage. Our infrastructure is engineered for speed, accuracy, and seamless scalability, ensuring your inventory moves efficiently from our docks to the customer’s door. We manage the entire lifecycle with advanced tracking systems that eliminate delays, no matter the product size.' },
+    { id: '04', title: 'SUPPORT', icon: '/customer support.png', desc: 'We handle the complexities of returns and customer communication so you don’t have to. Our systems are designed to maximize uptime and minimize friction, ensuring seamless inventory flow and rapid shipping, giving you the freedom to scale without the operational noise.' },
+  ].map((service) => (
+    <div key={service.id} className="relative group">
+      <div className="bg-[#121212] hover:shadow-[inset_0_8px_20px_rgba(255,255,255,0.2)] backdrop-blur-md border shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)] rounded-3xl w-full p-6 md:p-10 border-gray-400 group-hover:shadow-[0_0_50px_rgba(255,170,0,0.35)] group-hover:border-orange-500/60 cursor-pointer transition-transform duration-200 hover:scale-100 active:scale-95">
+        <div className="absolute shadow-[inset_0_4px_15px_rgba(255,255,255,0.2)] bg-[#121212] backdrop-blur-md border border-gray-400/70 rounded-full -top-5 w-12 h-12 md:w-15 md:h-15 -left-5 flex items-center justify-center text-xl font-medium -rotate-12 text-white">{service.id}</div>
+        <div className="flex drop-shadow-amber-500 drop-shadow-sm justify-center mb-5">
+          <img src={service.icon} alt={service.title} className="w-20 md:w-32 h-20 md:h-32 object-contain" />
+        </div>
+        <h3 className="text-white text-xl md:text-3xl text-center tracking-[0.25em] uppercase mb-4">{service.title}</h3>
+        <p className="text-white text-sm md:text-base text-center leading-relaxed mt-4 md:mt-8">{service.desc}</p>
+      </div>
+    </div>
+  ))}
+</div>
           </div>
         </section>
 

@@ -47,27 +47,31 @@ const Contact = () => {
           <Link href='/' className="absolute top-6 left-5 md:top-12 md:left-10 z-20 bg-linear-to-b from-transparent via-[#0A0A0A]/50 to-[#0A0A0A] text-white font-black tracking-widest text-lg md:text-xl cursor-pointer">
             Cody
           </Link>
+<nav className=" z-50 relative bg-neutral-900 backdrop-blur-2xl border border-white/30 px-4 md:px-8 py-3 rounded-full mb-16 sm:ml-90 shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]">
+  <input type="checkbox" id="menu-toggle" className="hidden peer" />
+  <div className="flex justify-end items-center">
+    {/* Desktop Menu */}
+    <ul className="hidden md:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
+      <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
+      <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
+      <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
+      <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
+      <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
+    </ul>
 
-            <nav className="z-50 relative bg-neutral-900 backdrop-blur-2xl border border-white/30 px-4 md:px-8 py-3 rounded-full mb-16 shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]">
-            <input type="checkbox" id="menu-toggle" className="hidden peer " />
-            <div className="flex justify-between items-center">
-              <ul className="hidden md:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
-                <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
-                <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
-                <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
-                <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
-                <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
-              </ul>
-              <label htmlFor="menu-toggle" className="md:hidden ml-auto text-white text-2xl cursor-pointer">☰</label>
-            </div>
-            <div className="absolute left-1 top-16 w-52 bg-neutral-900 border border-white/20 rounded-2xl p-6 flex-col gap-4 text-white hidden peer-checked:flex md:hidden">
-              <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
-                <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
-                <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
-                <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
-                <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
-            </div>
-          </nav>
+    {/* Mobile Menu Toggle */}
+    <label htmlFor="menu-toggle" className="md:hidden ml-auto text-white text-2xl cursor-pointer">☰</label>
+  </div>
+
+  {/* Mobile Menu (appears when menu toggle is checked) */}
+  <div className="absolute  top-16 w-45 bg-neutral-900 border border-white/20 rounded-2xl p-6 flex-col gap-4 text-white hidden peer-checked:flex md:hidden">
+    <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
+    <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
+    <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
+    <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
+    <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
+  </div>
+</nav>
         </section>
 
         {/* Form */}

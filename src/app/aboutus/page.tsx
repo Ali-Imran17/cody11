@@ -91,7 +91,7 @@ export default function aboutus() {
   
   <img 
     src="/founder.png" 
-    alt="Founder Samuel"
+    alt="Founder Zachary"
     className="absolute bottom-0 left-1/2 -translate-x-1/2 
                h-[100%] w-full object-contain
                z-10 grayscale brightness-100 opacity-90 contrast-110
@@ -107,7 +107,7 @@ export default function aboutus() {
       FOUNDER
     </h2>
     <h2 className="text-5xl md:text-6xl font-bold text-white leading-[0.8] tracking-tighter uppercase">
-      zachary 
+      Zachary 
     </h2>
   </div>
           </div>
@@ -131,13 +131,13 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
             </p>
             
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
   
   <div className="flex items-center cursor-pointer hover:border-amber-500 hover:shadow-amber-500/70 
     shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]
     transition-transform duration-300 hover:scale-105 active:scale-95 
     bg-neutral-900 backdrop-blur-2xl border border-white/30 
-    gap-2 px-3 sm:px-4 py-2 rounded-full">
+    gap-2 px-3  sm:px-4 py-2 rounded-full">
 
     <span className="text-sm sm:text-base">🧠</span>
     <span className="text-white text-xs sm:text-sm md:text-base font-medium tracking-wide">
@@ -157,14 +157,14 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
     </span>
   </div>
 
-  <div className="flex items-center cursor-pointer hover:border-amber-500 hover:shadow-amber-500/70 
+  <div className="flex h-11 items-center cursor-pointer hover:border-amber-500 hover:shadow-amber-500/70 
     shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]
     transition-transform duration-300 hover:scale-105 active:scale-95 
     bg-neutral-900 backdrop-blur-2xl border border-white/30 
-    gap-2 px-3 sm:px-4 py-2 rounded-full">
+    gap-1 px-3 sm:px-4 py-2 rounded-full">
 
     <span className="text-sm sm:text-base">🔥</span>
-    <span className="text-white text-xs sm:text-sm md:text-base font-medium tracking-wide">
+    <span className="text-white text-xs sm:text-sm md:text-base text-nowrap font-medium tracking-wide">
       Passionate Mentor
     </span>
   </div>
@@ -173,10 +173,10 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
     shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]
     transition-transform duration-300 hover:scale-105 active:scale-95 
     bg-neutral-900 backdrop-blur-2xl border border-white/30 
-    gap-2 px-3 sm:px-4 py-2 rounded-full">
+    gap-1 px-3 sm:px-4 py-2 rounded-full">
 
     <span className="text-sm sm:text-base">🤝</span>
-    <span className="text-white text-xs sm:text-sm md:text-base font-medium tracking-wide">
+    <span className="text-white text-xs text-nowrap sm:text-sm md:text-base font-medium tracking-wide">
       Empathetic Leader
     </span>
   </div>
@@ -223,10 +223,10 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
 
   {/* 2. Stacked Main Titles - matches the bold white typography */}
   <div className="space-y-2">
-    <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+    <h2 className="text-3xl md:text-6xl font-bold text-white tracking-tight leading-tight">
       Got Questions?
     </h2>
-    <h2 className="text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+    <h2 className="text-3xl md:text-6xl font-bold text-white tracking-tight leading-tight">
       We've Got Answers!
     </h2>
   </div>

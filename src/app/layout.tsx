@@ -12,9 +12,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Cody Commerce",
-  description: "Cody Commerce is a cutting-edge eCommerce solution that empowers brands to scale effortlessly. We provide a comprehensive suite of services, including inventory management, order fulfillment, and customer support, all designed to streamline your operations and maximize growth. With our advanced technology and dedicated team, we handle the complexities of eCommerce so you can focus on what matters most: growing your brand and delighting your customers.",
+export const metadata = {
+  title: "Codys Commerce",
+  description: "Build and scale your eCommerce business with us.",
+  openGraph: {
+    title: "Codys Commerce 🚀",
+    description: "We help you launch and grow your online store.",
+    url: "https://www.codyscommerce.com",
+    siteName: "Codys Commerce",
+    images: [
+      {
+        url: "/cody/public/cody logo.PNG", // put this in /public
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
