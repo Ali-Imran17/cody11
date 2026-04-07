@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
+
+
+const outfit = Outfit({
+  subsets: ['latin'],
+   variable: "--font-outfit",
+  weight: ['300', '400', '500', '600', '700'],
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +30,7 @@ export const metadata = {
     siteName: "Codys Commerce",
     images: [
       {
-        url: "/cody/public/cody logo.PNG", // put this in /public
+        url: "/favicon-3.png", 
         width: 1200,
         height: 630,
       },
@@ -39,9 +47,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      
+      className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full  flex flex-col">{children}</body>
     </html>
   );
 }

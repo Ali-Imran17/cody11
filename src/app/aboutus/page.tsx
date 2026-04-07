@@ -296,16 +296,16 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
   
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,black_90%)]"></div>
   </div>
-  <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-    <p className="text-white text-lg md:text-2xl leading-relaxed font-light tracking-wide">
-    Partnering with Cody’s Commerce "Cody’s Commerce is <br/> your definitive all-in-one growth partner.
-     You gain the<br/>  power of a synchronized team where every strategy<br/>  from marketing and advertising to daily 
-     account<br/>  management is aligned with your success. We provide a<br/>  complete service ecosystem designed to position
-      your<br/>  brand for market leadership. Let us absorb the<br/>  operational complexities so you can return to the parts<br/> 
-       of your business you love. Peace of mind starts here.
-    </p>
-
-   </div>
+<div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+  <p className="text-white  text-base sm:text-lg md:text-xl lg:text-3xl leading-loose font-extralight tracking-wide ">
+    Partnering with Cody’s Commerce, your definitive all-in-one growth partner.
+    You gain the power of a synchronized team where every strategy from marketing 
+    and advertising to daily account management is aligned with your success. 
+    We provide a complete service ecosystem designed to position your brand 
+    for market leadership. Let us absorb the operational complexities so you 
+    can return to the parts of your business you love. Peace of mind starts here.
+  </p>
+</div>
    
 </section>
 <div className='-mt-20 '>
@@ -331,51 +331,36 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
 </div>
         </section>
         {/* FAQ List Section */}
-  <section className="max-w-4xl mx-auto px-4 pb-20 relative z-10">
-      <div className="space-y-4">
-        {faqData.map((faq, i) => (
-          <div key={i}>
-            {/* Hidden checkbox to control the dropdown */}
-            <input
-              type="checkbox"
-              id={`faq-${i}`}
-              className="peer hidden"
-            />
+ <section className="max-w-4xl mx-auto px-4 pb-20 relative z-10">
+  <div className="space-y-4">
+    {faqData.map((faq, i) => (
+      <label
+        key={i}
+        className="block border border-neutral-700 bg-neutral-900 rounded-3xl cursor-pointer transition-all duration-300 hover:border-orange-500/50 hover:bg-neutral-800/60 shadow-[inset_0_1px_10px_rgba(255,255,255,0.05)] overflow-hidden"
+      >
+        {/* Hidden checkbox */}
+        <input type="checkbox" className="peer hidden" />
 
-            {/* Question with dropdown icon */}
-            <label
-              htmlFor={`faq-${i}`}
-              className="group border-neutral-700 border bg-linear-to-t from-orange-900/10 to-transparent text-gray-400 bg-neutral-900 p-5 rounded-4xl flex justify-between items-center cursor-pointer transition-all duration-300 hover:border-orange-500/50 hover:bg-neutral-800/60 shadow-[inset_0_1px_10px_rgba(255,255,255,0.05)]"
-            >
-              <span className="text-gray-200 font-medium tracking-wide">
-                {faq.question}
-              </span>
+        {/* Question */}
+        <div className="flex justify-between items-center p-5">
+          <span className="text-gray-200 font-medium tracking-wide">
+            {faq.question}
+          </span>
 
-              {/* The Orange Chevron Button */}
-              <div className="bg-[#FF8D28] p-2 rounded-lg text-black transition-transform duration-300 group-hover:scale-110">
-                <FiChevronDown size={20} />
-              </div>
-            </label>
-
-            {/* The answer dropdown */}
-            <div className="peer-checked:block hidden mt-2 p-4 bg-neutral-800/80 rounded-xl text-gray-300">
-              <p>{faq.answer}</p>
-            </div>
+          {/* Chevron */}
+          <div className="bg-[#FF8D28] p-2 rounded-lg text-black transition-transform duration-300 peer-checked:rotate-180">
+            <FiChevronDown size={20} />
           </div>
-        ))}
-      </div>
+        </div>
 
-      {/* Bottom Success Story CTA */}
-      <div className="mt-32 mb-10 text-center">
-        <p className="text-white text-lg md:text-lg max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
-          Partner with us today to transform your eCommerce strategy into <br className="hidden md:block" />
-          a <span className="text-gray-300 font-normal">scalable success story</span>
-        </p>
-
-        {/* Subtle Orange Glow at the bottom of the text */}
-        <div className="w-40 h-1 bg-orange-500/40 blur-xl mx-auto mt-4"></div>
-      </div>
-    </section>
+        {/* Answer */}
+        <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[500px] px-5">
+          <p className="text-gray-300 pb-5">{faq.answer}</p>
+        </div>
+      </label>
+    ))}
+  </div>
+</section>
 </div>
 
         {/* FOOTER (Centered Underline Included) */}
