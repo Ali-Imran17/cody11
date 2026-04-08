@@ -21,18 +21,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Codys Commerce",
+  title: "Cody's Commerce",
   description: "Build and scale your eCommerce business with us.",
   openGraph: {
-    title: "Codys Commerce",
+    title: "Cody's Commerce",
     description: "We help you launch and grow your online store.",
-    url: "https://www.codyscommerce.com",
+    url: "https://www.cody'scommerce.com",
     siteName: "Codys Commerce",
     images: [
       {
         url: "/favicon-3.png", 
-        width: 1200,
-        height: 630,
+        width: 500,
+        height: 500,
       },
     ],
     type: "website",

@@ -15,7 +15,7 @@ import Image from 'next/image';
     },
     {
       question: "What are the benefits of working with you?",
-      answer: "Increased online visibility Access to established distribution networks Professional Amazon account management Scalable sales growth Brand protection and consistency and profitability."
+      answer: "Increased online visibility Access to established distribution networks Professional Amazon account management Scalable sales growth Brand protection and consistency."
     },
     {
       question: "Do you require exclusivity?",
@@ -63,17 +63,16 @@ export default function aboutus() {
         </div>
         <div className="absolute inset-0 "></div>
 
-        <Link href='/' className="absolute top-12 left-10 z-20 bg-linear-to-b from-transparent via-[#0A0A0A]/50 to-[#0A0A0A] text-white font-black tracking-widest text-xl cursor-pointer">
-          Cody
-        </Link>
+         <Link href='/' className="absolute top-12 left-5  z-20 text-white font-black tracking-wide text-base sm:text-lg md:text-[18px] cursor-pointer">Cody's Commerce</Link>
+
 
     <nav className="
-  z-50 relative md:mx-auto ml-auto
+  z-50 relative md:mx-auto ml-auto 
   w-fit
   bg-neutral-900 backdrop-blur-2xl 
   border border-white/30 
-  px-4 md:px-8 py-3 
-  rounded-full mb-16 
+  px-4 md:px-8 py-2 sm:py-2.5 md:py-3 
+  rounded-full mb-8 sm:mb-12 md:mb-16 
   shadow-[inset_0_2px_10px_rgba(255,255,255,0.2)]
 ">
 
@@ -82,10 +81,10 @@ export default function aboutus() {
   <div className="flex justify-between items-center">
     
     {/* Desktop Menu */}
-    <ul className="hidden md:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
+    <ul className="hidden lg:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
       <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
       <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
-      <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
+      <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody's Commerce</Link>
       <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
       <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
     </ul>
@@ -93,7 +92,7 @@ export default function aboutus() {
     {/* Mobile Hamburger */}
     <label 
       htmlFor="menu-toggle" 
-      className="md:hidden ml-auto text-white text-2xl cursor-pointer"
+      className="md:block lg:hidden ml-auto  text-white cursor-pointer"
     >
       ☰
     </label>
@@ -102,17 +101,17 @@ export default function aboutus() {
 
   {/* Mobile Dropdown */}
   <div className="
-    absolute right-0 top-16   
+    absolute right-0 top-14 sm:top-16   
     w-52 
     bg-neutral-900 
     border border-white/20 
     rounded-2xl p-6 
     flex-col gap-4 text-white 
-    hidden peer-checked:flex md:hidden
+    hidden peer-checked:flex lg:hidden
   ">
     <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
     <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
-    <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody</Link>
+    <Link href='/codycommerce' className='hover:text-[#ff8d28]'>Cody's Commerce</Link>
     <Link href='/pricing' className='hover:text-[#ff8d28]'>Pricing</Link>
     <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
   </div>
@@ -120,7 +119,7 @@ export default function aboutus() {
 </nav>
 </section>
 
-        <section className="pt-16 md:pt-20 pb-20 md:pb-32 px-4 text-center">
+        <section className="pt-10 md:pt-20 pb-10 md:pb-30 px-4 text-center">
   
   <div className="max-w-4xl mx-auto rounded-3xl md:rounded-[2rem] 
     overflow-hidden border border-white/10 shadow-2xl relative">
@@ -284,7 +283,7 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
         </div>
       </section>
   
-<section className="relative w-full min-h-200 flex items-center justify-center overflow-hidden my-20">
+<section className="relative w-full min-h-200 flex items-center justify-center overflow-hidden my-10">
   
   <div className="absolute inset-0 z-0">
     <Image 
@@ -309,7 +308,7 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
    
 </section>
 <div className='-mt-20 '>
-        <section className="max-w-4xl  mx-auto px-4  py-32">
+        <section className="max-w-4xl  mx-auto px-4  py-30">
 <div className="flex flex-col  items-center text-center  px-4">
   
 
@@ -331,7 +330,7 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
 </div>
         </section>
         {/* FAQ List Section */}
- <section className="max-w-4xl mx-auto px-4 pb-20 relative z-10">
+ <section className="max-w-4xl mx-auto px-4 pb-10 relative z-10">
   <div className="space-y-4">
     {faqData.map((faq, i) => (
       <label
@@ -364,59 +363,62 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
 </div>
 
         {/* FOOTER (Centered Underline Included) */}
-      <footer className="py-20 mt-4 px-4">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+       <footer className="py-12 sm:py-16 md:py-20 mt-2 sm:mt-4 px-4">
 
-            {/* Contact Inputs */}
-            <div className="space-y-6">
-              <div className="flex items-center gap-3 bg-neutral-900 backdrop-blur-2xl border border-white/30 p-4 rounded-xl">
-                <div className="text-[#FF8D28] text-2xl"><CiMail /></div>
-                <input type="text" placeholder='loremipsum@mail.com' className='bg-transparent border-none focus:outline-none focus:ring-0 w-full'/>
-              </div>
-              <div className="flex items-center gap-3 bg-neutral-900 backdrop-blur-2xl border border-white/30 p-4 rounded-xl">
-                <div className="text-[#FF8D28] text-2xl"><FiPhoneCall /></div>
-                <input type="tel" placeholder='+1 000-020-4444' className='bg-transparent border-none focus:outline-none focus:ring-0 w-full' />
-              </div>
-            </div>
+  <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
 
-            {/* Quick Links */}
-         <div className="text-center md:text-left mx-auto md:mx-0 md:ml-20">
-  <h4 className="text-[#FF8D28] font-bold mb-4 tracking-widest text-2xl">
-    Quick Links
-  </h4>
+    {/* Contact Inputs */}
+    <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
+      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
+        <div className="text-[#FF8D28] text-xl sm:text-2xl"><CiMail /></div>
+        <input 
+          type="text" 
+          placeholder='loremipsum@mail.com' 
+          className='bg-transparent outline-none w-full text-sm sm:text-base'
+        />
+      </div>
 
-  <div className="flex flex-col items-center md:items-start space-y-1 text-sm font-bold text-white">
-    <Link href="/aboutus" className="hover:text-[#ff8d28] transition-colors">
-      About Us
-    </Link>
-    <Link href="/codycommerce" className="hover:text-[#ff8d28] transition-colors">
-      Cody Commerce
-    </Link>
-    <Link href="/pricing" className="hover:text-[#ff8d28] transition-colors">
-      Pricing
-    </Link>
-    <Link href="/contact" className="hover:text-[#ff8d28] transition-colors">
-      Contact
-    </Link>
+      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
+        <div className="text-[#FF8D28] text-xl sm:text-2xl"><FiPhoneCall /></div>
+        <input 
+          type="tel" 
+          placeholder='+1 000-020-4444' 
+          className='bg-transparent outline-none w-full text-sm sm:text-base'
+        />
+      </div>
+    </div>
+
+    {/* Quick Links */}
+    <div className="text-center md:text-left">
+      <h4 className="text-[#FF8D28] font-bold mb-4 sm:mb-5 tracking-widest text-lg sm:text-xl md:text-2xl">
+        Quick Links
+      </h4>
+
+      <div className="space-y-2 text-sm sm:text-base font-bold text-white flex flex-col items-center md:items-start">
+        <Link href='/aboutus' className="hover:text-[#ff8d28] transition-colors">About Us</Link>
+        <Link href='/codycommerce' className="hover:text-[#ff8d28] transition-colors">Cody's Commerce</Link>
+        <Link href='/pricing' className="hover:text-[#ff8d28] transition-colors">Pricing</Link>
+        <Link href='/contact' className="hover:text-[#ff8d28] transition-colors">Contact</Link>
+      </div>
+    </div>
+
+    {/* Social Links */}
+    <div className="flex justify-center md:justify-start items-center md:items-start">
+      <Link 
+        href='https://www.linkedin.com/in/zachary-cody-11b0381a4/'
+        target="_blank"
+        className='hover:text-white transition-all duration-300 hover:scale-110 text-[#FF8D28]'
+      >
+        <FiLinkedin size={32} className="sm:w-[36px] sm:h-[36px] md:w-[40px] md:h-[40px]" />
+      </Link>
+    </div>
+
   </div>
-</div>
 
-           {/* Social Links */}
-<div className="flex justify-center md:justify-start items-center text-[#FF8D28]">
-  <Link 
-    href='https://www.linkedin.com/in/zachary-cody-11b0381a4/'
-    target="_blank"
-    className='hover:text-white transition-all duration-300 hover:scale-110'
-  >
-    <FiLinkedin size={40} />
-  </Link>
-</div>
+  {/* Divider */}
+  <div className="w-full mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto border-t border-[#7B7878]"></div>
 
-
-          </div>
-
-          <div className="w-full mt-24 max-w-4xl mx-auto border-t border-[#7B7878]"></div>
-        </footer>
+</footer>
 
       </div>
     </div>
