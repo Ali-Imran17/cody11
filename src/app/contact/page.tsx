@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <div className="relative min-h-screen text-white font-sans selection:bg-orange-500/30">
       
-      {/* Background */}
+   
       <div className="absolute inset-0 bg-[#4b1f00] bg-[repeating-linear-gradient(90deg,#5a2400_0px,#5a2400_60px,#4b1f00_60px,#4b1f00_120px)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(0,0,0,0.7)_75%,black_100%)]"></div>
 
@@ -61,7 +61,7 @@ const Contact = () => {
 
   <div className="flex justify-between items-center">
     
-    {/* Desktop Menu */}
+   
     <ul className="hidden lg:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
       <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
       <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
@@ -70,7 +70,7 @@ const Contact = () => {
       <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
     </ul>
 
-    {/* Mobile Hamburger */}
+   
     <label 
       htmlFor="menu-toggle" 
       className="md:block lg:hidden ml-auto  text-white cursor-pointer"
@@ -80,7 +80,7 @@ const Contact = () => {
 
   </div>
 
-  {/* Mobile Dropdown */}
+ 
   <div className="
     absolute right-0 top-14 sm:top-16   
     w-52 
@@ -100,7 +100,7 @@ const Contact = () => {
 </nav>
         </section>
 
-        {/* Form */}
+    
       <form
   onSubmit={handleSubmit}
   className="w-full max-w-3xl mx-auto px-3 sm:px-4 md:px-6 py-4 sm:py-6 md:py-8"
@@ -159,7 +159,7 @@ const Contact = () => {
       Submit
     </button>
 
-    {/* Success message */}
+  
     {status && (
       <p className="text-center text-green-400 mt-3 sm:mt-4 text-xs sm:text-sm">{status}</p>
     )}
@@ -171,33 +171,59 @@ const Contact = () => {
               Partner with us today to transform your eCommerce strategy into <br/> a scalable success story
             </p>
           </div>
-        {/* Footer */}
+       
          <footer className="py-12 sm:py-16 md:py-20 mt-2 sm:mt-4 px-4">
 
   <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
 
-    {/* Contact Inputs */}
-    <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><CiMail /></div>
-        <input 
-          type="text" 
-          placeholder='loremipsum@mail.com' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
+   
+   <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
+   
 
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><FiPhoneCall /></div>
-        <input 
-          type="tel" 
-          placeholder='+1 000-020-4444' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
-    </div>
+         <a
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=zcody1@codyscommerce.com&su=&body=Hi there"
+     target="_blank"
+     rel="noopener noreferrer"
+           className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+         >
+        
+           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+   
+          
+           <div className="relative z-10 flex items-center gap-3 w-full">
+             <div className="text-[#FF8D28] text-xl sm:text-2xl">
+               <CiMail />
+             </div>
+             <span className="text-sm sm:text-base text-gray-300">
+              zcody1@codyscommerce.com
+             </span>
+           </div>
+         </a>
+   
+       
+         <a
+           href="tel:+18457010551"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+         >
+       
+           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+   
+        
+           <div className="relative z-10 flex items-center gap-3 w-full">
+             <div className="text-[#FF8D28] text-xl sm:text-2xl">
+               <FiPhoneCall />
+             </div>
+             <span className="text-sm sm:text-base text-gray-300">
+               +1 845-701-0551
+             </span>
+           </div>
+         </a>
+   
+       </div>
 
-    {/* Quick Links */}
+   
     <div className="text-center md:text-left">
       <h4 className="text-[#FF8D28] font-bold mb-4 sm:mb-5 tracking-widest text-lg sm:text-xl md:text-2xl">
         Quick Links
@@ -211,7 +237,7 @@ const Contact = () => {
       </div>
     </div>
 
-    {/* Social Links */}
+
     <div className="flex justify-center md:justify-start items-center md:items-start">
       <Link 
         href='https://www.linkedin.com/in/zachary-cody-11b0381a4/'
@@ -224,7 +250,7 @@ const Contact = () => {
 
   </div>
 
-  {/* Divider */}
+ 
   <div className="w-full mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto border-t border-[#7B7878]"></div>
 
 </footer>

@@ -42,7 +42,7 @@ const pricing = () => {
 
   <div className="flex justify-between items-center">
     
-    {/* Desktop Menu */}
+   
     <ul className="hidden lg:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
       <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
       <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
@@ -51,7 +51,6 @@ const pricing = () => {
       <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
     </ul>
 
-    {/* Mobile Hamburger */}
     <label 
       htmlFor="menu-toggle" 
       className="md:block lg:hidden ml-auto  text-white cursor-pointer"
@@ -61,7 +60,7 @@ const pricing = () => {
 
   </div>
 
-  {/* Mobile Dropdown */}
+
   <div className="
     absolute right-0 top-14 sm:top-16   
     w-52 
@@ -112,53 +111,96 @@ const pricing = () => {
   min-h-[150px] sm:min-h-[200px] md:min-h-[250px]
 ">
       <div className="w-full max-w-6xl">
-        {/* Outer Border Container */}
+     
         <div className="relative p-[2px] rounded-4xl border shadow-[inset_0_-10px_30px_rgba(96,40,9,5)] border-b-[#EEFF00]/40 border-white/20 bg-linear-to-b from-[#121212] to-[#2e1111] shadow-2xl">
           
-          {/* Inner Container with Grid Lines */}
+        
           <div className="relative rounded-[28px] bg-linear-to-b from-[#121212] to-[#2e1111] overflow-hidden">
             
-            {/* Cody Commerce Overlay Column - Positioned Absolutely */}
-           <div className="absolute
-  left-[22%] sm:left-[21%]
-  
-  top-0 bottom-5 
-  w-[20%] sm:w-[20%] 
-  z-20 pointer-events-none">
+           
+          <div className="absolute left-[22%] sm:left-[21%] top-0 bottom-0 w-[20%] sm:w-[20%] z-20 pointer-events-none">
+  <div className="h-full flex flex-col rounded-2xl bg-gradient-to-b from-[#F27507] to-[#5E2F06] border border-yellow-300/60 shadow-[0_0_25px_rgba(255,200,0,0.25),inset_0_-10px_25px_rgba(0,0,0,0.4)]">
 
-  <div className="h-[102%] flex flex-col rounded-2xl 
-    bg-gradient-to-b from-[#F27507] to-[#5E2F06] 
-    border border-yellow-300/60
-    shadow-[0_0_25px_rgba(255,200,0,0.25),inset_0_-10px_25px_rgba(0,0,0,0.4)]">
-
-    {/* HEADER */}
-    <div className="flex items-center justify-center 
-      h-14 sm:h-17 md:h-20 lg:h-20 xl:h-24 
-      text-center px-2 sm:px-3 
-      border-b border-black/40">
-
-      <h3 className="text-white font-semibold 
-        text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg leading-tight">
-        Cody's Commerce<br />Partnership
+    <div className="flex items-center justify-center h-16 sm:h-20 md:h-24 text-center px-2 border-b border-black/40">
+      <h3 className="text-white font-semibold text-xs sm:text-sm md:text-base lg:text-lg leading-tight">
+        Cody Commerce<br />Partnership
       </h3>
     </div>
 
-    {/* ROWS */}
+   
     {[
-      3, // row 1
-      3, // row 2
-      3, // row 3
-      4  // row 4
+      3, // Strategic
+  
     ].map((count, i) => (
       <div
         key={i}
-        className="flex-1 flex flex-col items-center justify-center 
-        border-b border-black/40 space-y-6 sm:space-y-8 md:space-y-4 lg:space-y-10 mt-6 sm:mt-5 md:mt-8 lg:mt-10">
-
+        className="flex-1 flex flex-col items-center justify-center border-b border-black/40 gap-8 sm:gap-10 md:gap-10 lg:gap-16 lg:mt-10 mt-5"
+      >
         {[...Array(count)].map((_, j) => (
-          <span key={j} className="text-white text-[10px] sm:text-xs md:text-sm">
-            <span className="text-yellow-300 drop-shadow-[0_0_6px_#FFE100]">✔</span> Yes
-          </span>
+          <div
+            key={j}
+            className="flex items-center justify-center gap-1 text-white text-[10px] sm:text-xs md:text-sm"
+          >
+            <span className="text-yellow-300 drop-shadow-[0_0_6px_#FFE100]">✔</span>
+            <span>Yes</span>
+          </div>
+        ))}
+      </div>
+    ))}
+       {[
+      3, // Sales & Brand Control
+   
+    ].map((count, i) => (
+      <div
+        key={i}
+        className="flex-1 flex flex-col items-center justify-center border-b border-black/40 gap-8 sm:gap-10 md:gap-10 lg:gap-16  mb-2 sm:mb-3 md:mb-5 "
+      >
+        {[...Array(count)].map((_, j) => (
+          <div
+            key={j}
+            className="flex items-center justify-center gap-1 text-white text-[10px] sm:text-xs md:text-sm"
+          >
+            <span className="text-yellow-300 drop-shadow-[0_0_6px_#FFE100]">✔</span>
+            <span>Yes</span>
+          </div>
+        ))}
+      </div>
+    ))}
+       {[
+      3, // Fulfillment & Logistics
+   
+    ].map((count, i) => (
+      <div
+        key={i}
+        className="flex-1 flex flex-col items-center justify-center border-b border-black/40 gap-8 sm:gap-10 md:gap-10 lg:gap-16 lg:mb-15 mb-7"
+      >
+        {[...Array(count)].map((_, j) => (
+          <div
+            key={j}
+            className="flex items-center justify-center gap-1 text-white text-[10px] sm:text-xs md:text-sm"
+          >
+            <span className="text-yellow-300 drop-shadow-[0_0_6px_#FFE100]">✔</span>
+            <span>Yes</span>
+          </div>
+        ))}
+      </div>
+    ))}
+       {[
+      4, // ecosystem
+
+    ].map((count, i) => (
+      <div
+        key={i}
+        className="flex-1 flex flex-col items-center justify-center  gap-8 sm:gap-10 md:gap-10 lg:gap-16 lg:mb-8 mb-2"
+      >
+        {[...Array(count)].map((_, j) => (
+          <div
+            key={j}
+            className="flex items-center justify-center gap-1 text-white text-[10px] sm:text-xs md:text-sm"
+          >
+            <span className="text-yellow-300 drop-shadow-[0_0_6px_#FFE100]">✔</span>
+            <span>Yes</span>
+          </div>
         ))}
       </div>
     ))}
@@ -166,66 +208,66 @@ const pricing = () => {
   </div>
 </div>
 
-            {/* Table Content */}
+            
             <div className="relative z-0 p-2 sm:p-3 md:p-4 lg:p-6 xl:p-8">
               
-              {/* Header Row */}
+           
               <div className="grid grid-cols-5 gap-0 mb-0 border-b border-white/10">
                 <div className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 border-r border-white/10"></div>
                 
-                {/* Cody Commerce - Transparent to show overlay */}
-                <div className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 "></div>
+               
+                <div className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24"></div>
                 
-                {/* 3P Vendor Central */}
-                <div className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 flex items-center justify-center border-r border-white/10 ">
+               
+                <div className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 flex items-center justify-center border-r border-white/10">
                   <h3 className="text-gray-400 text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-xl text-center px-1 sm:px-2 leading-tight">
                     3P Vendor<br />Central
                   </h3>
                 </div>
                 
-                {/* Traditional 3P Resellers */}
-                <div className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 flex items-center justify-center border-r border-white/10 ">
+             
+                <div className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 flex items-center justify-center border-r border-white/10">
                   <h3 className="text-gray-400 text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-xl text-center px-1 sm:px-2 leading-tight">
                     Traditional 3P<br />Resellers
                   </h3>
                 </div>
                 
-                {/* In House */}
-                <div className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 flex items-center justify-center ">
+              
+                <div className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 flex items-center justify-center">
                   <h3 className="text-gray-400 text-[8px] sm:text-xs md:text-sm lg:text-base xl:text-xl text-center px-1 sm:px-2 leading-tight">
                     In House
                   </h3>
                 </div>
               </div>
 
-              {/* Strategic Guidance Section */}
+         
               <div className="border-b border-gray-700/50">
-                {/* Section Header */}
+               
                 <div className="grid grid-cols-5 gap-0">
-                  <div className="py-2 sm:py-3 md:py-4 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 ">
+                  <div className="py-2 sm:py-3 md:py-4 px-1 sm:px-2 md:px-3 border-r border-gray-700/50">
                     <h4 className="text-white font-bold text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg leading-tight">
                       Strategic<br />Guidance
                     </h4>
                   </div>
-                  <div className=""></div>
+                  <div className="border-r border-gray-700/50"></div>
                   <div className="border-r border-gray-700/50"></div>
                   <div className="border-r border-gray-700/50"></div>
                   <div></div>
                 </div>
 
-                {/* High Level Growth Strategy */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
-                  <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center ">
+              
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
+                  <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">High Level Growth Strategy</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50 ">
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
                     <MdDoNotDisturbOn />
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50 ">
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
                     <MdDoNotDisturbOn />
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center">
@@ -233,13 +275,13 @@ const pricing = () => {
                   </div>
                 </div>
 
-                {/* 1:1 Dedicated Expert */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+              
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">1:1 <br />Dedicated Expert</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -253,13 +295,12 @@ const pricing = () => {
                   </div>
                 </div>
 
-                {/* Strict MAP Compliance */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Strict MAP Compliance</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -274,28 +315,28 @@ const pricing = () => {
                 </div>
               </div>
 
-              {/* Sales & Brand Control Section */}
+             
               <div className="border-b border-gray-700/50">
-                {/* Section Header */}
+            
                 <div className="grid grid-cols-5 gap-0">
                   <div className="py-2 sm:py-3 md:py-4 px-1 sm:px-2 md:px-3 border-r border-gray-700/50">
                     <h4 className="text-white font-bold text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg leading-tight">
                       Sales & Brand<br />Control
                     </h4>
                   </div>
-                  <div className=""></div>
+                  <div className="border-r border-gray-700/50"></div>
                   <div className="border-r border-gray-700/50"></div>
                   <div className="border-r border-gray-700/50"></div>
                   <div></div>
                 </div>
 
-                {/* Complete Catalog Optimization */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+                
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Complete Catalog Optimization</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -309,13 +350,13 @@ const pricing = () => {
                   </div>
                 </div>
 
-                {/* High Volume Purchase Order */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+              
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">High Volume Purchase Order</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -329,13 +370,13 @@ const pricing = () => {
                   </div>
                 </div>
 
-                {/* Full Data Transparency */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+             
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Full Data Transparency</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -350,28 +391,47 @@ const pricing = () => {
                 </div>
               </div>
 
-              {/* Fulfillment & Logistics Section */}
+           
               <div className="border-b border-gray-700/50">
-                {/* Section Header */}
+             
                 <div className="grid grid-cols-5 gap-0">
                   <div className="py-2 sm:py-3 md:py-4 px-1 sm:px-2 md:px-3 border-r border-gray-700/50">
                     <h4 className="text-white font-bold text-[10px] sm:text-xs md:text-sm lg:text-base xl:text-lg leading-tight">
                       Fulfillment &<br />Logistics
                     </h4>
                   </div>
-                  <div className=""></div>
+                  <div className="border-r border-gray-700/50"></div>
                   <div className="border-r border-gray-700/50"></div>
                   <div className="border-r border-gray-700/50"></div>
                   <div></div>
                 </div>
 
-                {/* Custom Prep & Labeling */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+              
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Custom Prep & Labeling</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
+                    <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
+                  </div>
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
+                    <MdDoNotDisturbOn />
+                  </div>
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
+                    <MdDoNotDisturbOn />
+                  </div>
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center">
+                    <MdDoNotDisturbOn />
+                  </div>
+                </div>
+  
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
+                  <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
+                    <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Accelerated Prime Delivery</p>
+                  </div>
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -385,33 +445,13 @@ const pricing = () => {
                   </div>
                 </div>
 
-                {/* Accelerated Prime Delivery */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
-                  <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
-                    <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Accelerated Prime Delivery</p>
-                  </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
-                    <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
-                  </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
-                    <MdDoNotDisturbOn />
-                  </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
-                    <MdDoNotDisturbOn />
-                  </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center ">
-                    <MdDoNotDisturbOn />
-                  </div>
-                </div>
-
-                {/* End to End Returns Management */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+              
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">End to End Returns Management</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -426,7 +466,7 @@ const pricing = () => {
                 </div>
               </div>
 
-              {/* Ecosystem Protection Section */}
+          
               <div>
                 {/* Section Header */}
                 <div className="grid grid-cols-5 gap-0">
@@ -435,19 +475,19 @@ const pricing = () => {
                       Ecosystem<br />Protection
                     </h4>
                   </div>
-                  <div className=""></div>
+                  <div className="border-r border-gray-700/50"></div>
                   <div className="border-r border-gray-700/50"></div>
                   <div className="border-r border-gray-700/50"></div>
                   <div></div>
                 </div>
 
-                {/* Strict Platform Compliance */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+               
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Strict Platform Compliance</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -461,13 +501,13 @@ const pricing = () => {
                   </div>
                 </div>
 
-                {/* Listing Hijacker Protection */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+              
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Listing Hijacker Protection</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -481,13 +521,13 @@ const pricing = () => {
                   </div>
                 </div>
 
-                {/* Proactive Account Health */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+               
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 border-r border-gray-700/50 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Proactive Account Health</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1 border-r border-gray-700/50">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -501,13 +541,13 @@ const pricing = () => {
                   </div>
                 </div>
 
-                {/* Advance PPC & Scaling */}
-                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50">
+              
+                <div className="grid grid-cols-5 gap-0 border-t border-gray-700/50 h-12 sm:h-14 md:h-16 lg:h-20">
                   <div className="py-1.5 sm:py-2 md:py-2.5 px-1 sm:px-2 md:px-3 flex items-center">
                     <p className="text-gray-300 text-[8px] sm:text-[10px] md:text-xs lg:text-sm">Advance PPC & Scaling</p>
                   </div>
-                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-center bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
-                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs" />
+                  <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center justify-start pl-4 sm:pl-6 md:pl-8 bg-gradient-to-br from-orange-500/10 to-transparent gap-0.5 sm:gap-1">
+                    <FaCheck className="text-[8px] sm:text-[10px] md:text-xs text-orange-400" />
                     <span className="text-orange-400 font-medium text-[8px] sm:text-[10px] md:text-xs">Yes</span>
                   </div>
                   <div className="py-1.5 sm:py-2 md:py-2.5 flex items-center text-gray-500 text-base sm:text-lg md:text-xl justify-center border-r border-gray-700/50">
@@ -537,28 +577,54 @@ const pricing = () => {
 
   <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
 
-    {/* Contact Inputs */}
-    <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><CiMail /></div>
-        <input 
-          type="text" 
-          placeholder='loremipsum@mail.com' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
+   
+   <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
+   
+        
+         <a
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=zcody1@codyscommerce.com&su=&body=Hi there"
+     target="_blank"
+     rel="noopener noreferrer"
+           className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+         >
+           
+           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+   
+          
+           <div className="relative z-10 flex items-center gap-3 w-full">
+             <div className="text-[#FF8D28] text-xl sm:text-2xl">
+               <CiMail />
+             </div>
+             <span className="text-sm sm:text-base text-gray-300">
+              zcody1@codyscommerce.com
+             </span>
+           </div>
+         </a>
+   
+         
+         <a
+           href="tel:+18457010551"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+         >
+         
+           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+   
+        
+           <div className="relative z-10 flex items-center gap-3 w-full">
+             <div className="text-[#FF8D28] text-xl sm:text-2xl">
+               <FiPhoneCall />
+             </div>
+             <span className="text-sm sm:text-base text-gray-300">
+               +1 845-701-0551
+             </span>
+           </div>
+         </a>
+   
+       </div>
 
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><FiPhoneCall /></div>
-        <input 
-          type="tel" 
-          placeholder='+1 000-020-4444' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
-    </div>
-
-    {/* Quick Links */}
+ 
     <div className="text-center md:text-left">
       <h4 className="text-[#FF8D28] font-bold mb-4 sm:mb-5 tracking-widest text-lg sm:text-xl md:text-2xl">
         Quick Links
@@ -572,7 +638,7 @@ const pricing = () => {
       </div>
     </div>
 
-    {/* Social Links */}
+   
     <div className="flex justify-center md:justify-start items-center md:items-start">
       <Link 
         href='https://www.linkedin.com/in/zachary-cody-11b0381a4/'
@@ -585,7 +651,7 @@ const pricing = () => {
 
   </div>
 
-  {/* Divider */}
+ 
   <div className="w-full mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto border-t border-[#7B7878]"></div>
 
 </footer>

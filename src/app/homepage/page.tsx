@@ -7,8 +7,81 @@ import { FiLinkedin } from "react-icons/fi";
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useRef, useEffect } from "react";
+
+// Define the type for dropdown content
+interface DropdownContent {
+  title: string;
+  description: string;
+  
+}
+
+// Dropdown content mapping for each icon
+const dropdownData: Record<string, DropdownContent> = {
+  Investment: {
+    title: "Investment Solutions",
+    description:
+      "We provide comprehensive investment strategies tailored to your financial goals, risk tolerance, and time horizon. Our expert team analyzes market trends to maximize returns while minimizing risks.",
+  },
+  Strategy: {
+    title: "Strategic Planning",
+    description:
+      "Our strategic planning services help businesses navigate complex markets and achieve sustainable growth. We develop data-driven strategies that align with your vision and deliver measurable results.",
+   
+  },
+  Logistics: {
+    title: "Logistics Management",
+    description:
+      "Streamline your supply chain with our end-to-end logistics solutions. From warehousing to last-mile delivery, we ensure efficient operations and cost-effective transportation.",
+   
+  },
+  Support: {
+    title: "24/7 Customer Support",
+    description:
+      "Our dedicated support team is available around the clock to assist with any questions or concerns. We pride ourselves on quick response times and effective problem resolution.",
+  
+   
+  },
+};
 
 export default function HomePage() {
+ const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const iconRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (activeDropdown) {
+        const iconElement = iconRefs.current[activeDropdown];
+        const dropdownElement = dropdownRefs.current[activeDropdown];
+
+        if (
+          iconElement &&
+          !iconElement.contains(event.target as Node) &&
+          dropdownElement &&
+          !dropdownElement.contains(event.target as Node)
+        ) {
+          setActiveDropdown(null);
+        }
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [activeDropdown]);
+
+  const toggleDropdown = (iconName: string) => {
+    setActiveDropdown(activeDropdown === iconName ? null : iconName);
+  };
+
+  const icons = [
+    { name: "Investment", img: "/money bag.png" },
+    { name: "Strategy", img: "/brain.png" },
+    { name: "Logistics", img: "/delivery truck.png" },
+    { name: "Support", img: "/headphone.png" },
+  ];
+  
   return (
     <div className="relative min-h-screen transition-colors text-white font-sans selection:bg-orange-500/30 overflow-hidden">
       {/* Background */}
@@ -91,7 +164,7 @@ export default function HomePage() {
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-12 text-center px-2">
             Strategic Brand Expansion and <br />
             <span className="text-white font-bold text-xl sm:text-2xl md:text-3xl lg:text-5xl">
-              Unlocking Revenue Streams for
+              Unlocking Revenue Streams 
             </span>
             <p className='text-xs sm:text-sm md:text-base font-light mt-2 sm:mt-3 md:mt-4'>
               From Listing to Logistics: Powering Your Growth<br className="block sm:hidden"/> Across North America
@@ -100,7 +173,7 @@ export default function HomePage() {
 
           {/* Commerce Section */}
           <div className="mt-12 sm:mt-16 md:mt-20 lg:mt-28 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium uppercase text-orange-400">The Cody Commerce</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium uppercase text-orange-400">The Cody's Commerce</h2>
             <p className="text-xl sm:text-2xl md:text-3xl">Growth Engine</p>
            
             <p className='text-xs sm:text-sm text-white mt-2 sm:mt-3 md:mt-4'>At Cody’s Commerce you aren’t a number you’re a priority.</p>
@@ -277,81 +350,63 @@ export default function HomePage() {
             Hover over the milestones below to explore the key phases of our <br className="hidden sm:block"/> integration process.
           </p>
 
-          <div className="relative text-white mt-8 sm:mt-10 md:mt-12 lg:mt-20">
-          
+         <div className="relative w-full ml-5 sm:ml-15 md:ml-15 lg:ml-23 text-white mt-8 sm:mt-10 md:mt-12 lg:mt-20">
+  <div className="w-full py-6 sm:py-8 md:py-10 lg:py-12 flex justify-center">
+    <div className="w-full max-w-6xl px-2 sm:px-4 flex items-center justify-center">
+      {icons.map((icon, index) => (
+        <div key={icon.name} className="flex items-center flex-1 min-w-0">
+          <div className="flex flex-col items-center relative">
+            {/* Icon Button */}
+            <div
+              ref={(el) => {
+                iconRefs.current[icon.name] = el;
+              }}
+              onClick={() => toggleDropdown(icon.name)}
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 transition-transform duration-300 active:scale-95 hover:scale-110 cursor-pointer rounded-full border-2 border-[#FF8D28] bg-[#2a0f04] flex items-center justify-center shadow-[0_0_10px_#FF8D28] z-10"
+            >
+              <img
+                src={icon.img}
+                alt={icon.name}
+                className="w-5 sm:w-6 md:w-8 lg:w-10 object-contain"
+              />
+            </div>
 
-          <div className="w-full py-6 sm:py-8 md:py-10 lg:py-12 flex justify-center">
-  
-<div className="w-full max-w-6xl px-4 flex items-center">    
-  
-     {/* Icon 1 */}
-   {/* Icon 1 */}
-<div className="flex items-center w-full">
-  
-  <div className="flex flex-col items-center">
-    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 transition-transform duration-300 active:scale-95 hover:scale-110 cursor-pointer rounded-full border-2 border-[#FF8D28] bg-[#2a0f04] flex items-center justify-center shadow-[0_0_10px_#FF8D28] z-10">
-      <img src="/money bag.png" className="w-6 sm:w-8 md:w-10 object-contain" />
+            <p className="text-white text-[10px] sm:text-xs md:text-sm mt-2 text-center whitespace-nowrap">
+              {icon.name}
+            </p>
+
+            {/* Dropdown Menu */}
+            {activeDropdown === icon.name && (
+  <div
+    ref={(el) => {
+      dropdownRefs.current[icon.name] = el;
+    }}
+    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[260px] sm:w-[180px] md:w-[180px] lg:w-[240px] bg-gradient-to-br from-[#171717] to-[#2a0f04] border border-[#FF8D28] rounded-xl shadow-2xl z-50 animate-in fade-in slide-in-from-top-2 duration-200 hidden sm:block"
+  >
+    {/* Arrow pointer */}
+    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 rotate-45 bg-[#171717] border-l border-t border-[#FF8D28]"></div>
+
+    <div className="p-4 sm:p-5 md:p-6">
+      <h3 className="text-[#FF8D28] text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-2">
+        {dropdownData[icon.name].title}
+      </h3>
+      <p className="text-gray-300 text-xs sm:text-sm mb-4 leading-relaxed">
+        {dropdownData[icon.name].description}
+      </p>
     </div>
-
-    <p className="text-white text-[10px] sm:text-xs md:text-sm mt-2 text-center whitespace-nowrap">
-      Investment
-    </p>
   </div>
-
-  <div className="flex-1 h-[2px] bg-[#FF8D28]"></div>
-</div>
-
-{/* Icon 2 */}
-<div className="flex items-center w-full">
-  
-  <div className="flex flex-col items-center">
-    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 transition-transform duration-300 active:scale-95 hover:scale-110 cursor-pointer rounded-full border-2 border-[#FF8D28] bg-[#2a0f04] flex items-center justify-center shadow-[0_0_10px_#FF8D28] z-10">
-      <img src="/brain.png" className="w-6 sm:w-8 md:w-10 object-contain" />
-    </div>
-
-    <p className="text-white text-[10px] sm:text-xs md:text-sm mt-2 text-center whitespace-nowrap">
-      Strategy
-    </p>
-  </div>
-
-  <div className="flex-1 h-[2px] bg-[#FF8D28]"></div>
-</div>
-
-{/* Icon 3 */}
-<div className="flex items-center w-full">
-  
-  <div className="flex flex-col items-center">
-    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 transition-transform duration-300 active:scale-95 hover:scale-110 cursor-pointer rounded-full border-2 border-[#FF8D28] bg-[#2a0f04] flex items-center justify-center shadow-[0_0_10px_#FF8D28] z-10">
-      <img src="/delivery truck.png" className="w-6 sm:w-8 md:w-10 object-contain" />
-    </div>
-
-    <p className="text-white text-[10px] sm:text-xs md:text-sm mt-2 text-center whitespace-nowrap">
-      Logistics
-    </p>
-  </div>
-
-  <div className="flex-1 h-[2px] bg-[#FF8D28]"></div>
-</div>
-
-{/* Icon 4 */}
-<div className="flex items-center">
-  
-  <div className="flex flex-col items-center">
-    <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 transition-transform duration-300 active:scale-95 hover:scale-110 cursor-pointer rounded-full border-2 border-[#FF8D28] bg-[#2a0f04] flex items-center justify-center shadow-[0_0_10px_#FF8D28] z-10">
-      <img src="/headphone.png" className="w-6 sm:w-8 md:w-10 object-contain" />
-    </div>
-
-    <p className="text-white text-[10px] sm:text-xs md:text-sm mt-2 text-center whitespace-nowrap">
-      Support
-    </p>
-  </div>
-
-
-    </div>
-
-  </div>
-</div>
+            )}
           </div>
+
+          {/* Connecting Line (except for last item) - Now visible on all screens */}
+          {index < icons.length - 1 && (
+            <div className="flex-1 h-[1px] sm:h-[2px] mb-6 sm:mb-7 bg-[#FF8D28] min-w-[15px]"></div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
           <div>
             <p className='text-white tracking-widest text-[10px] sm:text-xs md:text-sm mt-8 sm:mt-10 md:mt-12 lg:mt-16 px-4'>
               Partner with us today to transform your eCommerce strategy into <br className="hidden sm:block"/> a scalable success story
@@ -365,24 +420,50 @@ export default function HomePage() {
   <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
 
     {/* Contact Inputs */}
-    <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><CiMail /></div>
-        <input 
-          type="text" 
-          placeholder='loremipsum@mail.com' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
+      <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
 
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><FiPhoneCall /></div>
-        <input 
-          type="tel" 
-          placeholder='+1 000-020-4444' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
+      {/* EMAIL BUTTON */}
+      <a
+        href="https://mail.google.com/mail/?view=cm&fs=1&to=zcody1@codyscommerce.com&su=&body=Hi there"
+  target="_blank"
+  rel="noopener noreferrer"
+        className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+      >
+        {/* Glow Effect */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+
+        {/* Content */}
+        <div className="relative z-10 flex items-center gap-3 w-full">
+          <div className="text-[#FF8D28] text-xl sm:text-2xl">
+            <CiMail />
+          </div>
+          <span className="text-sm sm:text-base text-gray-300">
+           zcody1@codyscommerce.com
+          </span>
+        </div>
+      </a>
+
+      {/* PHONE BUTTON */}
+      <a
+        href="tel:+18457010551"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+      >
+        {/* Glow Effect */}
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+
+        {/* Content */}
+        <div className="relative z-10 flex items-center gap-3 w-full">
+          <div className="text-[#FF8D28] text-xl sm:text-2xl">
+            <FiPhoneCall />
+          </div>
+          <span className="text-sm sm:text-base text-gray-300">
+            +1 845-701-0551
+          </span>
+        </div>
+      </a>
+
     </div>
 
     {/* Quick Links */}

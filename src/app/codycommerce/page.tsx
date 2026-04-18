@@ -7,16 +7,16 @@ import { TbSettings2 } from "react-icons/tb";
 const codycommerce = () => {
   return (
     <div className="relative min-h-screen transition-colors text-white font-sans selection:bg-orange-500/30 ">
-      {/* Background pattern */}
+    
       <div className="absolute inset-0 bg-[#4b1f00] bg-[repeating-linear-gradient(90deg,#5a2400_0px,#5a2400_60px,#4b1f00_60px,#4b1f00_120px)]">
       </div>
 
-      {/* Radial gradient overlay */}
+     
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,rgba(0,0,0,0.7)_75%,black_100%)]">
       </div>
       
       <div className="relative z-10">
-        {/* Navigation Section */}
+      
         <section className="relative flex flex-col items-center pt-6 md:pt-10 px-4 ">
           <div className="absolute inset-0 opacity-10 pointer-events-none" 
             style={{ background: 'repeating-linear-gradient(90deg, transparent, transparent 80px, #4a2b00 80px, #4a2b00 81px)' }}>
@@ -40,7 +40,7 @@ const codycommerce = () => {
 
   <div className="flex justify-between items-center">
     
-    {/* Desktop Menu */}
+  
     <ul className="hidden lg:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
       <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
       <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
@@ -49,7 +49,6 @@ const codycommerce = () => {
       <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
     </ul>
 
-    {/* Mobile Hamburger */}
     <label 
       htmlFor="menu-toggle" 
       className="md:block lg:hidden ml-auto  text-white cursor-pointer"
@@ -59,7 +58,7 @@ const codycommerce = () => {
 
   </div>
 
-  {/* Mobile Dropdown */}
+  
   <div className="
     absolute right-0 top-14 sm:top-16   
     w-52 
@@ -81,22 +80,22 @@ const codycommerce = () => {
 <section className="relative py-12 md:py-24 overflow-hidden px-4">
 
   
-{/* Vertical Line */}
+
 <div className="hidden lg:block xl:block absolute left-[15%]  lg:left-[23%] xl:left-[25%] -translate-x-1/2
-   lg:top-47 xl:top-42  bottom-0 
+ lg:top-47 xl:top-42  bottom-0 
   w-0.5 bg-[#FFE100] shadow-[0_0_25px_#facc15]
-  md:h-[57%] lg:h-[58%] xl:h-[58%]" />
+  md:h-[57%] lg:h-[58.5%] xl:h-[58%]" />
   <div className="relative max-w-7xl mx-auto space-y-16 sm:space-y-20 md:space-y-28 lg:space-y-40">
 
-    {/* ITEM 1 */}
+   
     <div className="relative flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 lg:gap-12">
 
-      {/* Content */}
+      
      <div className="w-full lg:w-[60%] justify-center items-center lg:text-start px-4 lg:pr-12 order-2 sm:text-center lg:ml-60 "> 
-      <h2 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-xl font-semibold mb-4"> 
+      <h2 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-2xl font-semibold mb-4"> 
         Marketplace Mastery & Revenue Growth </h2>
          <p className="text-xs sm:text-sm text-white leading-relaxed">
-           At Cody's, we don't just list your products; we dominate the digital shelf.
+           At Cody's Commerce, we don't just list your products; we dominate the digital shelf.
            <br className="hidden sm:block"/> We aggressively manage your presence across Amazon and top
            <br className="hidden sm:block"/> eCommerce channels to maximize visibility and revenue.<br/> <br/>
             <span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> 
@@ -107,9 +106,9 @@ const codycommerce = () => {
               platform.<br/><br/> <span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> 
               Precision Advertising Our in-house advertising specialists design targeted PPC campaigns aligned with your financial goals. We continuously optimize for ROI to accelerate sales velocity and capture market share.<br/><br/> <span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> Brand Visibility Programs Cody's Commerce goes beyond the buy box. We implement strategic marketing initiatives designed to enhance your brand authority and ensure your products stand out wherever your customers are searching. </p> </div>
 
-      {/* Icon */}
+   
 <div className="hidden lg:block xl:block  absolute left-[15%] lg:left-[22.25%] xl:left-[23.75%] 2xl:left-[12.5%]  top-1/2 -translate-x-1/2 -translate-y-64 items-center justify-center">
-  
+  <div className="absolute w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#231000] rounded-full z-0"></div>
   <div className="text-[#FFE100] drop-shadow-[0_0_8px_#facc15] text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
     <TbSettings2 />
   </div>
@@ -118,27 +117,27 @@ const codycommerce = () => {
 
     </div>
 
-    {/* ITEM 2 */}
+   
     <div className="relative flex flex-col lg:flex-row justify-center  items-center gap-6 sm:gap-8 lg:gap-12">
 
-      {/* Icon */}
+    
 <div className="hidden lg:block xl:block  absolute left-[15%]  lg:left-[22.25%] xl:left-[23.75%] 2xl:left-[12.5%] top-1/2 -translate-x-1/2 -translate-y-80 items-center justify-center">
   <div className="relative flex items-center justify-center">
-    {/* Dark circular background */}
+
     <div className="absolute w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#231000] rounded-full z-0"></div>
 
-    {/* Glowing blur behind icon */}
+   
     <div className="absolute w-8 h-8 sm:w-10 sm:h-10 bg-yellow-400/20 blur-3xl rounded-full z-10"></div>
 
-    {/* The icon itself */}
+   
     <div className="relative z-20 text-[#FFE100] drop-shadow-[0_0_8px_#facc15] text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
       <TbSettings2 />
     </div>
   </div>
 </div>
-      {/* Content */}
+     
      <div className="w-full lg:w-[60%] justify-center items-center lg:text-start px-4 lg:pr-12 order-2 sm:text-center lg:ml-60 "> 
-      <h3 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-xl font-semibold mb-4"> 
+      <h3 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-2xl font-semibold mb-4"> 
         Logistics, Fulfillment & Operations </h3> 
         <p className="text-xs sm:text-sm text-white leading-relaxed"> 
           At Cody's, we turn logistics into a competitive advantage. We ensure<br className="hidden sm:block"/>
@@ -147,12 +146,12 @@ const codycommerce = () => {
 
     </div>
 
-    {/* ITEM 3 */}
+   
     <div className="relative flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 lg:gap-12">
 
-      {/* Content */}
+    
      <div className="w-full lg:w-[60%] justify-center items-center lg:text-start px-4 lg:pr-12 order-2 sm:text-center lg:ml-60 ">
-       <h2 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-xl font-semibold mb-4"> 
+       <h2 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-2xl font-semibold mb-4"> 
        Accelerated Expansion & Long-Term Value</h2> 
        <p className="text-xs sm:text-sm text-white leading-relaxed">
            At Cody’s, growth isn't accidental it’s engineered. We drive your eCommerce<br/>
@@ -175,10 +174,12 @@ channels grant your brand access to exclusive beta programs,<br/>
 promotional slots, and high-visibility opportunities that aren't<br/>
 available to the general public.<br/><br/> </p> </div>
 
-      {/* Icon */}
+    
+      
 <div className="hidden lg:block xl:block absolute left-[15%]  lg:left-[22.25%] xl:left-[23.75%] 2xl:left-[12.5%]  top-1/2 -translate-x-1/2 -translate-y-80 items-center justify-center">
   
   <div className="text-[#FFE100] drop-shadow-[0_0_8px_#facc15] text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
+    
     <TbSettings2 />
   </div>
 
@@ -194,33 +195,59 @@ available to the general public.<br/><br/> </p> </div>
               Partner with us today to transform your eCommerce strategy into <br className="hidden md:block"/> a scalable success story
             </p>
           </div>
-        {/* Footer */}
+       
         <footer className="py-12 sm:py-16 md:py-20 mt-2 sm:mt-4 px-4">
 
   <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
 
-    {/* Contact Inputs */}
-    <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><CiMail /></div>
-        <input 
-          type="text" 
-          placeholder='loremipsum@mail.com' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
+   
+ <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
+ 
+      
+       <a
+         href="https://mail.google.com/mail/?view=cm&fs=1&to=zcody1@codyscommerce.com&su=&body=Hi there"
+   target="_blank"
+   rel="noopener noreferrer"
+         className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+       >
+       
+         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+ 
+        
+         <div className="relative z-10 flex items-center gap-3 w-full">
+           <div className="text-[#FF8D28] text-xl sm:text-2xl">
+             <CiMail />
+           </div>
+           <span className="text-sm sm:text-base text-gray-300">
+            zcody1@codyscommerce.com
+           </span>
+         </div>
+       </a>
+ 
+     
+       <a
+         href="tel:+18457010551"
+         target="_blank"
+         rel="noopener noreferrer"
+         className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+       >
+     
+         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+ 
+       
+         <div className="relative z-10 flex items-center gap-3 w-full">
+           <div className="text-[#FF8D28] text-xl sm:text-2xl">
+             <FiPhoneCall />
+           </div>
+           <span className="text-sm sm:text-base text-gray-300">
+             +1 845-701-0551
+           </span>
+         </div>
+       </a>
+ 
+     </div>
 
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><FiPhoneCall /></div>
-        <input 
-          type="tel" 
-          placeholder='+1 000-020-4444' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
-    </div>
-
-    {/* Quick Links */}
+   
     <div className="text-center md:text-left">
       <h4 className="text-[#FF8D28] font-bold mb-4 sm:mb-5 tracking-widest text-lg sm:text-xl md:text-2xl">
         Quick Links
@@ -234,7 +261,7 @@ available to the general public.<br/><br/> </p> </div>
       </div>
     </div>
 
-    {/* Social Links */}
+   
     <div className="flex justify-center md:justify-start items-center md:items-start">
       <Link 
         href='https://www.linkedin.com/in/zachary-cody-11b0381a4/'
@@ -247,7 +274,7 @@ available to the general public.<br/><br/> </p> </div>
 
   </div>
 
-  {/* Divider */}
+
   <div className="w-full mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto border-t border-[#7B7878]"></div>
 
 </footer>

@@ -27,7 +27,7 @@ export const metadata = {
     title: "Cody's Commerce",
     description: "We help you launch and grow your online store.",
     url: "https://www.cody'scommerce.com",
-    siteName: "Codys Commerce",
+    siteName: "Cody's Commerce",
     images: [
       {
         url: "/favicon-3.png", 

@@ -80,7 +80,7 @@ export default function aboutus() {
 
   <div className="flex justify-between items-center">
     
-    {/* Desktop Menu */}
+   
     <ul className="hidden lg:flex gap-6 md:gap-8 text-sm font-bold tracking-wide text-white">
       <Link href='/' className='hover:text-[#ff8d28]'>Home</Link>
       <Link href='/aboutus' className='hover:text-[#ff8d28]'>About</Link>
@@ -89,7 +89,7 @@ export default function aboutus() {
       <Link href='/contact' className='hover:text-[#ff8d28]'>Contact</Link>
     </ul>
 
-    {/* Mobile Hamburger */}
+  
     <label 
       htmlFor="menu-toggle" 
       className="md:block lg:hidden ml-auto  text-white cursor-pointer"
@@ -99,7 +99,7 @@ export default function aboutus() {
 
   </div>
 
-  {/* Mobile Dropdown */}
+  
   <div className="
     absolute right-0 top-14 sm:top-16   
     w-52 
@@ -124,7 +124,7 @@ export default function aboutus() {
   <div className="max-w-4xl mx-auto rounded-3xl md:rounded-[2rem] 
     overflow-hidden border border-white/10 shadow-2xl relative">
 
-    {/* Image */}
+   
     <Image 
       src="/business-people-working-together-office-business-team-working-together-business-people-working-together_980226-10010.jpg"
       width={1179} 
@@ -134,11 +134,11 @@ export default function aboutus() {
       object-cover opacity-60"
     />
 
-    {/* Gradient Overlay */}
+    
     <div className="absolute inset-0 bg-gradient-to-t 
       from-[#0a0500] via-transparent to-transparent"></div>
 
-    {/* Text */}
+    
     <div className="absolute bottom-4 sm:bottom-6 md:bottom-10 
       left-0 right-0 px-4">
 
@@ -149,7 +149,7 @@ export default function aboutus() {
       <p className="text-[#FF8D28] 
         text-2xl sm:text-3xl md:text-4xl 
         mt-1 sm:mt-2 font-medium">
-        Cody Commerce !
+        Cody's Commerce !
       </p>
 
     </div>
@@ -329,7 +329,7 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
   </div>
 </div>
         </section>
-        {/* FAQ List Section */}
+      
  <section className="max-w-4xl mx-auto px-4 pb-10 relative z-10">
   <div className="space-y-4">
     {faqData.map((faq, i) => (
@@ -340,19 +340,19 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
         {/* Hidden checkbox */}
         <input type="checkbox" className="peer hidden" />
 
-        {/* Question */}
+       
         <div className="flex justify-between items-center p-5">
           <span className="text-gray-200 font-medium tracking-wide">
             {faq.question}
           </span>
 
-          {/* Chevron */}
+         
           <div className="bg-[#FF8D28] p-2 rounded-lg text-black transition-transform duration-300 peer-checked:rotate-180">
             <FiChevronDown size={20} />
           </div>
         </div>
 
-        {/* Answer */}
+       
         <div className="max-h-0 overflow-hidden transition-all duration-500 peer-checked:max-h-[500px] px-5">
           <p className="text-gray-300 pb-5">{faq.answer}</p>
         </div>
@@ -362,33 +362,58 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
 </section>
 </div>
 
-        {/* FOOTER (Centered Underline Included) */}
+      
        <footer className="py-12 sm:py-16 md:py-20 mt-2 sm:mt-4 px-4">
 
   <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
 
-    {/* Contact Inputs */}
-    <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><CiMail /></div>
-        <input 
-          type="text" 
-          placeholder='loremipsum@mail.com' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
 
-      <div className="flex items-center gap-3 bg-neutral-900 border border-white/30 p-3 sm:p-4 rounded-xl">
-        <div className="text-[#FF8D28] text-xl sm:text-2xl"><FiPhoneCall /></div>
-        <input 
-          type="tel" 
-          placeholder='+1 000-020-4444' 
-          className='bg-transparent outline-none w-full text-sm sm:text-base'
-        />
-      </div>
-    </div>
+   <div className="space-y-4 sm:space-y-5 w-full sm:col-span-2 md:col-span-1">
+   
+        
+         <a
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=zcody1@codyscommerce.com&su=&body=Hi there"
+     target="_blank"
+     rel="noopener noreferrer"
+           className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+         >
+        
+           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+   
+   
+           <div className="relative z-10 flex items-center gap-3 w-full">
+             <div className="text-[#FF8D28] text-xl sm:text-2xl">
+               <CiMail />
+             </div>
+             <span className="text-sm sm:text-base text-gray-300">
+              zcody1@codyscommerce.com
+             </span>
+           </div>
+         </a>
+   
+         <a
+           href="tel:+18457010551"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+         >
+        
+           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+   
+   
+           <div className="relative z-10 flex items-center gap-3 w-full">
+             <div className="text-[#FF8D28] text-xl sm:text-2xl">
+               <FiPhoneCall />
+             </div>
+             <span className="text-sm sm:text-base text-gray-300">
+               +1 845-701-0551
+             </span>
+           </div>
+         </a>
+   
+       </div>
 
-    {/* Quick Links */}
+ 
     <div className="text-center md:text-left">
       <h4 className="text-[#FF8D28] font-bold mb-4 sm:mb-5 tracking-widest text-lg sm:text-xl md:text-2xl">
         Quick Links
@@ -402,7 +427,6 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
       </div>
     </div>
 
-    {/* Social Links */}
     <div className="flex justify-center md:justify-start items-center md:items-start">
       <Link 
         href='https://www.linkedin.com/in/zachary-cody-11b0381a4/'
@@ -415,7 +439,7 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
 
   </div>
 
-  {/* Divider */}
+
   <div className="w-full mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto border-t border-[#7B7878]"></div>
 
 </footer>
