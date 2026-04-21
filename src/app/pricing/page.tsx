@@ -1,11 +1,17 @@
+"use client";
+
 import { FiPhoneCall, FiLinkedin } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 import Link from 'next/link';
 import { MdDoNotDisturbOn } from "react-icons/md";
 import { FaCheck } from 'react-icons/fa'
+import { useState } from "react";
 
 
 const pricing = () => {
+  
+  const [copySuccess, setCopySuccess] = useState(false); 
+
   return (
     <div className="relative min-h-screen transition-colors text-white font-sans selection:bg-orange-500/30 overflow-x-hidden">
     
@@ -603,24 +609,59 @@ const pricing = () => {
    
          
          <a
-           href="tel:+18457010551"
+           href={/iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent) ? "tel:+18457010551" : undefined}
            target="_blank"
            rel="noopener noreferrer"
            className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+           onClick={(e) => {
+             const isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+             if (!isMobile) {
+               e.preventDefault();
+               navigator.clipboard.writeText("+1 845-701-0551").then(() => {
+                 setCopySuccess(true);
+                 setTimeout(() => setCopySuccess(false), 3000);
+               });
+             }
+           }}
          >
-         
            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
-   
-        
-           <div className="relative z-10 flex items-center gap-3 w-full">
-             <div className="text-[#FF8D28] text-xl sm:text-2xl">
-               <FiPhoneCall />
+           <div className="relative z-10 flex items-center justify-between gap-3 w-full">
+             <div className="flex items-center gap-3">
+               <div className="text-[#FF8D28] text-xl sm:text-2xl">
+                 <FiPhoneCall />
+               </div>
+               <span className="text-sm sm:text-base text-gray-300">
+                 +1 845-701-0551
+               </span>
              </div>
-             <span className="text-sm sm:text-base text-gray-300">
-               +1 845-701-0551
-             </span>
+             {/* Copy icon - visible only on desktop */}
+             <div className="hidden lg:flex items-center gap-1 text-gray-400 group-hover:text-[#FF8D28] transition-colors">
+               {copySuccess ? (
+                 <>
+                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-[#FF8D28]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                   </svg>
+                   <span className="text-xs text-[#FF8D28] hidden sm:inline">Copied!</span>
+                 </>
+               ) : (
+                 <>
+                   <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                     <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                   </svg>
+                   <span className="text-xs hidden sm:inline">Copy</span>
+                 </>
+               )}
+             </div>
            </div>
          </a>
+         
+         {/* Toast notification for copy success */}
+         {copySuccess && (
+           <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-neutral-900 text-[#FF8D28] border border-[#FF8D28]
+            font-medium px-4 py-2 rounded-lg text-sm z-50 ease-in-out duration-700">
+             Phone number copied to clipboard!
+           </div>
+         )}
    
        </div>
 

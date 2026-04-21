@@ -1,10 +1,15 @@
 
+"use client";
+
 import { FiPhoneCall, FiLinkedin } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 import Link from 'next/link';
 import { TbSettings2 } from "react-icons/tb";
+import { useState } from "react";
 
 const codycommerce = () => {
+  const [copySuccess, setCopySuccess] = useState(false);
+  
   return (
     <div className="relative min-h-screen transition-colors text-white font-sans selection:bg-orange-500/30 ">
     
@@ -82,9 +87,9 @@ const codycommerce = () => {
   
 
 <div className="hidden lg:block xl:block absolute left-[15%]  lg:left-[23%] xl:left-[25%] -translate-x-1/2
- lg:top-47 xl:top-42  bottom-0 
+ lg:top-38 xl:top-30  bottom-0 
   w-0.5 bg-[#FFE100] shadow-[0_0_25px_#facc15]
-  md:h-[57%] lg:h-[58.5%] xl:h-[58%]" />
+  md:h-[57%] lg:h-[60%] xl:h-[58%]" />
   <div className="relative max-w-7xl mx-auto space-y-16 sm:space-y-20 md:space-y-28 lg:space-y-40">
 
    
@@ -94,17 +99,34 @@ const codycommerce = () => {
      <div className="w-full lg:w-[60%] justify-center items-center lg:text-start px-4 lg:pr-12 order-2 sm:text-center lg:ml-60 "> 
       <h2 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-2xl font-semibold mb-4"> 
         Marketplace Mastery & Revenue Growth </h2>
-         <p className="text-xs sm:text-sm text-white leading-relaxed">
-           At Cody's Commerce, we don't just list your products; we dominate the digital shelf.
-           <br className="hidden sm:block"/> We aggressively manage your presence across Amazon and top
-           <br className="hidden sm:block"/> eCommerce channels to maximize visibility and revenue.<br/> <br/>
-            <span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> 
-            Conversion-Driven Content Our content team launches and<br className="hidden sm:block"/> 
-            upgrades your listings with precision. We optimize titles,<br className="hidden sm:block"/>
-             bullets, and visual assets to match search algorithms,<br className="hidden sm:block"/> 
-             ensuring your products convert browsers into buyers on every<br className="hidden sm:block"/>
-              platform.<br/><br/> <span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> 
-              Precision Advertising Our in-house advertising specialists design targeted PPC campaigns aligned with your financial goals. We continuously optimize for ROI to accelerate sales velocity and capture market share.<br/><br/> <span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> Brand Visibility Programs Cody's Commerce goes beyond the buy box. We implement strategic marketing initiatives designed to enhance your brand authority and ensure your products stand out wherever your customers are searching. </p> </div>
+          <p className="text-xs sm:text-sm text-white leading-relaxed mb-4">
+    At Cody's Commerce, we don't just list your products; we dominate the digital shelf.
+    We aggressively manage your presence across Amazon and top
+    eCommerce channels to maximize visibility and revenue.
+  </p>
+   <div className="space-y-4 sm:space-y-5">
+    {/* Bullet 1 - Conversion-Driven Content */}
+    <div className="flex gap-2 sm:gap-3">
+            <span className="text-[#FFE100] text-base sm:text-xl leading-6 sm:leading-7 flex-shrink-0">●</span>
+      <p className="text-xs sm:text-sm text-white leading-relaxed">
+        Conversion-Driven Content Our content team launches and
+        upgrades your listings with precision. We optimize titles,
+        bullets, and visual assets to match search algorithms,
+        ensuring your products convert browsers into buyers on every
+        platform.
+      </p> </div> <div className="flex gap-2 sm:gap-3"> <span className="text-[#FFE100] text-base sm:text-xl leading-6 sm:leading-7 flex-shrink-0">●</span>
+      <p className="text-xs sm:text-sm text-white leading-relaxed">
+        Precision Advertising Our in-house advertising specialists 
+        design targeted PPC campaigns aligned with your financial goals. We continuously optimize for ROI to accelerate sales 
+        velocity and capture market share.
+      </p>
+      </div><div className="flex gap-2 sm:gap-3">
+               <span className="text-[#FFE100] text-base sm:text-xl leading-6 sm:leading-7 flex-shrink-0">●</span>
+      <p className="text-xs sm:text-sm text-white leading-relaxed">
+        Brand Visibility Programs 
+        Cody's Commerce goes beyond the buy box. We implement strategic marketing initiatives 
+        designed to enhance your brand authority and ensure your products stand out wherever your customers are searching.
+       </p> </div></div> </div>
 
    
 <div className="hidden lg:block xl:block  absolute left-[15%] lg:left-[22.25%] xl:left-[23.75%] 2xl:left-[12.5%]  top-1/2 -translate-x-1/2 -translate-y-64 items-center justify-center">
@@ -136,53 +158,124 @@ const codycommerce = () => {
   </div>
 </div>
      
-     <div className="w-full lg:w-[60%] justify-center items-center lg:text-start px-4 lg:pr-12 order-2 sm:text-center lg:ml-60 "> 
-      <h3 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-2xl font-semibold mb-4"> 
-        Logistics, Fulfillment & Operations </h3> 
-        <p className="text-xs sm:text-sm text-white leading-relaxed"> 
-          At Cody's, we turn logistics into a competitive advantage. We ensure<br className="hidden sm:block"/>
-           nationwide delivery that is fast, reliable, and consistent with<br className="hidden sm:block"/>
-      the high standards your customers expect.<br/><br/> <span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> Strategic Warehousing Once we purchase your inventory,<br className="hidden sm:block"/> we take full responsibility for its storage and flow. We keep<br className="hidden sm:block"/> products organized and in-stock, ensuring immediate<br className="hidden sm:block"/> availability to prevent delays and missed sales opportunities.<br/><br/> <span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> Versatile Fulfillment Solutions We specialize in complexity. Whether shipping small parcels or oversized freight, our team<br className="hidden sm:block"/> handles rigorous prep, pack, and shipping protocols. We<br className="hidden sm:block"/> ensure every package meets strict marketplace compliance<br className="hidden sm:block"/> and arrives safely.<br/><br/> <span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> Full-Cycle Support & Returns We manage the entire<br className="hidden sm:block"/> post-purchase experience. From efficient reverse logistics to<br className="hidden sm:block"/> responsive customer inquiries, Cody's Commerce ensures a<br className="hidden sm:block"/> hassle-free experience that protects your brand's reputation<br className="hidden sm:block"/> and seller rating.<br/><br/> </p> </div>
-
+    <div className="w-full lg:w-[60%] mb-20 justify-center items-center lg:text-start px-4 lg:pr-12 order-2 sm:text-center lg:ml-60">
+  <h3 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-2xl font-semibold mb-4">
+    Logistics, Fulfillment & Operations
+  </h3>
+  
+  {/* Subheading styled paragraph */}
+  <p className="text-xs sm:text-sm text-white leading-relaxed mb-4">
+    At Cody's Commerce, we turn logistics into a competitive advantage. We ensure
+    nationwide delivery that is fast, reliable, and consistent with
+    the high standards your customers expect.
+  </p>
+  
+  {/* Bullet points with proper styling */}
+  <div className="space-y-4 sm:space-y-5">
+    {/* Bullet 1 - Strategic Warehousing */}
+    <div className="flex gap-2 sm:gap-3">
+      <span className="text-[#FFE100] text-base sm:text-xl leading-6 sm:leading-7 flex-shrink-0">●</span>
+      <p className="text-xs sm:text-sm text-white leading-relaxed">
+        Strategic Warehousing Once we purchase your inventory,
+        we take full responsibility for its storage and flow. We keep
+        products organized and in-stock, ensuring immediate
+        availability to prevent delays and missed sales opportunities.
+      </p>
+    </div>
+    
+    {/* Bullet 2 - Versatile Fulfillment Solutions */}
+    <div className="flex gap-2 sm:gap-3">
+      <span className="text-[#FFE100] text-base sm:text-xl leading-6 sm:leading-7 flex-shrink-0">●</span>
+      <p className="text-xs sm:text-sm text-white leading-relaxed">
+        Versatile Fulfillment Solutions We specialize in complexity. Whether shipping small parcels or oversized freight, our team
+        handles rigorous prep, pack, and shipping protocols. We
+        ensure every package meets strict marketplace compliance
+        and arrives safely.
+      </p>
+    </div>
+    
+    {/* Bullet 3 - Full-Cycle Support & Returns */}
+    <div className="flex gap-2 sm:gap-3">
+      <span className="text-[#FFE100] text-base sm:text-xl leading-6 sm:leading-7 flex-shrink-0">●</span>
+      <p className="text-xs sm:text-sm text-white leading-relaxed">
+        Full-Cycle Support & Returns We manage the entire
+        post-purchase experience. From efficient reverse logistics to
+        responsive customer inquiries, Cody's Commerce ensures a
+        hassle-free experience that protects your brand's reputation
+        and seller rating.
+      </p>
+    </div>
+  </div>
+</div>
     </div>
 
    
     <div className="relative flex flex-col lg:flex-row justify-center items-center gap-6 sm:gap-8 lg:gap-12">
 
     
-     <div className="w-full lg:w-[60%] justify-center items-center lg:text-start px-4 lg:pr-12 order-2 sm:text-center lg:ml-60 ">
-       <h2 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-2xl font-semibold mb-4"> 
-       Accelerated Expansion & Long-Term Value</h2> 
-       <p className="text-xs sm:text-sm text-white leading-relaxed">
-           At Cody’s, growth isn't accidental it’s engineered. We drive your eCommerce<br/>
-expansion through high-level strategy and data intelligence, custom-tailored<br/> to capitalize on your brand’s unique strengths and market dynamics.<br/><br/>
-
-<span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> Adaptive Market Intelligence We keep your brand ahead of<br/>
-the curve. By continuously monitoring sales channels for<br/>
-emerging trends and algorithm shifts, Cody’s Commerce<br/>
-adapts your strategy in real-time. We identify opportunities the<br/>
-moment they arise to capture new market share.<br/><br/>
-<span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> Dedicated Account Expertise Partnership is personal here.<br/>
-You are paired with a dedicated Account Manager who deeply<br/>
-understands your specific category and objectives. You get<br/>
-focused support, clear communication, and a strategic ally<br/>
-invested in your milestones.<br/><br/>
-
-<span className="text-[#FFE100] text-base sm:text-xl mr-2">●</span> Exclusive Platform Opportunities Leverage our network for<br/>
-your gain. Our established relationships with major sales<br/>
-channels grant your brand access to exclusive beta programs,<br/>
-promotional slots, and high-visibility opportunities that aren't<br/>
-available to the general public.<br/><br/> </p> </div>
+    <div className="w-full lg:w-[60%] -mt-20 justify-center items-center lg:text-start px-4 lg:pr-12 order-2 sm:text-center lg:ml-60">
+  <h2 className="text-[#FFE100] drop-shadow-[0_0_1px_#facc15] text-lg sm:text-2xl font-semibold mb-4">
+    Accelerated Expansion & Long-Term Value
+  </h2>
+  
+  {/* Subheading styled paragraph */}
+  <p className="text-xs sm:text-sm text-white leading-relaxed mb-4">
+    At Cody's, growth isn't accidental — it's engineered. We drive your eCommerce
+    expansion through high-level strategy and data intelligence, custom-tailored
+    to capitalize on your brand's unique strengths and market dynamics.
+  </p>
+  
+  {/* Bullet points with proper styling */}
+  <div className="space-y-4 sm:space-y-5">
+    {/* Bullet 1 */}
+    <div className="flex gap-2 sm:gap-3">
+      <span className="text-[#FFE100] text-base sm:text-xl leading-6 sm:leading-7 flex-shrink-0">●</span>
+      <p className="text-xs sm:text-sm text-white leading-relaxed">
+        Adaptive Market Intelligence We keep your brand ahead of
+        the curve. By continuously monitoring sales channels for
+        emerging trends and algorithm shifts, Cody's Commerce
+        adapts your strategy in real-time. We identify opportunities the
+        moment they arise to capture new market share.
+      </p>
+    </div>
+    
+    {/* Bullet 2 */}
+    <div className="flex gap-2 sm:gap-3">
+      <span className="text-[#FFE100] text-base sm:text-xl leading-6 sm:leading-7 flex-shrink-0">●</span>
+      <p className="text-xs sm:text-sm text-white leading-relaxed">
+        Dedicated Account Expertise Partnership is personal here.
+        You are paired with a dedicated Account Manager who deeply
+        understands your specific category and objectives. You get
+        focused support, clear communication, and a strategic ally
+        invested in your milestones.
+      </p>
+    </div>
+    
+    {/* Bullet 3 */}
+    <div className="flex gap-2 sm:gap-3">
+      <span className="text-[#FFE100] text-base sm:text-xl leading-6 sm:leading-7 flex-shrink-0">●</span>
+      <p className="text-xs sm:text-sm text-white leading-relaxed">
+        Exclusive Platform Opportunities Leverage our network for
+        your gain. Our established relationships with major sales
+        channels grant your brand access to exclusive beta programs,
+        promotional slots, and high-visibility opportunities that aren't
+        available to the general public.
+      </p>
+    </div>
+  </div>
+</div>
 
     
       
-<div className="hidden lg:block xl:block absolute left-[15%]  lg:left-[22.25%] xl:left-[23.75%] 2xl:left-[12.5%]  top-1/2 -translate-x-1/2 -translate-y-80 items-center justify-center">
-  
-  <div className="text-[#FFE100] drop-shadow-[0_0_8px_#facc15] text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
-    
-    <TbSettings2 />
+<div className="hidden lg:block xl:block absolute left-[15%] lg:left-[22.25%] xl:left-[23.75%] 2xl:left-[12.5%] top-1/2 -translate-x-1/2 -translate-y-80 items-center justify-center">
+  <div className="relative flex items-center justify-center">
+    {/* Circular background behind the icon */}
+    <div className="absolute w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#231000] rounded-full z-0"></div>
+    {/* Icon on top */}
+    <div className="relative z-20 text-[#FFE100] drop-shadow-[0_0_8px_#facc15] text-6xl sm:text-7xl md:text-8xl lg:text-9xl">
+      <TbSettings2 />
+    </div>
   </div>
-
 </div>
 
   </div>
@@ -226,25 +319,59 @@ available to the general public.<br/><br/> </p> </div>
  
      
        <a
-         href="tel:+18457010551"
+         href={/iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent) ? "tel:+18457010551" : undefined}
          target="_blank"
          rel="noopener noreferrer"
          className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+         onClick={(e) => {
+           const isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+           if (!isMobile) {
+             e.preventDefault();
+             navigator.clipboard.writeText("+1 845-701-0551").then(() => {
+               setCopySuccess(true);
+               setTimeout(() => setCopySuccess(false), 3000);
+             });
+           }
+         }}
        >
-     
          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
- 
-       
-         <div className="relative z-10 flex items-center gap-3 w-full">
-           <div className="text-[#FF8D28] text-xl sm:text-2xl">
-             <FiPhoneCall />
+         <div className="relative z-10 flex items-center justify-between gap-3 w-full">
+           <div className="flex items-center gap-3">
+             <div className="text-[#FF8D28] text-xl sm:text-2xl">
+               <FiPhoneCall />
+             </div>
+             <span className="text-sm sm:text-base text-gray-300">
+               +1 845-701-0551
+             </span>
            </div>
-           <span className="text-sm sm:text-base text-gray-300">
-             +1 845-701-0551
-           </span>
+           {/* Copy icon - visible only on desktop */}
+           <div className="hidden lg:flex items-center gap-1 text-gray-400 group-hover:text-[#FF8D28] transition-colors">
+             {copySuccess ? (
+               <>
+                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-[#FF8D28]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                 </svg>
+                 <span className="text-xs text-[#FF8D28] hidden sm:inline">Copied!</span>
+               </>
+             ) : (
+               <>
+                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                 </svg>
+                 <span className="text-xs hidden sm:inline">Copy</span>
+               </>
+             )}
+           </div>
          </div>
        </a>
- 
+       
+       {/* Toast notification for copy success */}
+       {copySuccess && (
+         <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-neutral-900 text-[#FF8D28] border border-[#FF8D28]
+          font-medium px-4 py-2 rounded-lg text-sm z-50 ease-in-out duration-700">
+           Phone number copied to clipboard!
+         </div>
+       )}
      </div>
 
    

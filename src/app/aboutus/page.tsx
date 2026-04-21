@@ -1,49 +1,54 @@
+"use client";
 
-import {  FiPhoneCall, FiLinkedin, FiChevronDown } from "react-icons/fi";
+import { FiPhoneCall, FiLinkedin, FiChevronDown } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from "react";
 
- const faqData = [
-    {
-      question: "Which marketplaces do you operate on?",
-      answer: "We primarily operate on Amazon, along with other major online marketplaces and retail distribution networks depending on the brand’s requirements."
-    },
-    {
-      question: "Do you work with international brands?",
-      answer: "Yes, we partner with both local and international brands looking to expand into new markets through reliable distribution and e-commerce strategies."
-    },
-    {
-      question: "What are the benefits of working with you?",
-      answer: "Increased online visibility Access to established distribution networks Professional Amazon account management Scalable sales growth Brand protection and consistency."
-    },
-    {
-      question: "Do you require exclusivity?",
-      answer: "Exclusivity depends on the brand and agreement terms. We are flexible and open to discussing mutually beneficial arrangements."
-    },
-    {
-      question: "How do you ensure brand protection on Amazon?",
-      answer: "We follow strict compliance policies, maintain MAP pricing where applicable, and work closely with brands to protect their identity and reputation."
-    },
-    {
-      question: "Can I track my brand's performance?",
-      answer: "Yes, we provide regular reports and insights on sales, performance, and growth."
-    },
-    {
-      question: "What makes you different from other sellers?",
-      answer: "We focus on long-term brand building, authorized partnerships, and data-driven growth strategies rather than short-term reselling."
-    },
-    {
-      question: "Why should I trust you with my brand?",
-      answer: "We have experience managing multiple brands, proven sales performance, and a strong supply chain network that ensures sustainable growth."
-    },
-    {
-      question: "Do you already work with established brands?",
-      answer: "Yes, we currently manage and distribute multiple brands across different categories, with a growing portfolio and proven results."
-    },
-  ];
+const faqData = [
+  {
+    question: "Which marketplaces do you operate on?",
+    answer: "We primarily operate on Amazon, along with other major online marketplaces and retail distribution networks depending on the brand’s requirements."
+  },
+  {
+    question: "Do you work with international brands?",
+    answer: "Yes, we partner with both local and international brands looking to expand into new markets through reliable distribution and e-commerce strategies."
+  },
+  {
+    question: "What are the benefits of working with you?",
+    answer: "Increased online visibility Access to established distribution networks Professional Amazon account management Scalable sales growth Brand protection and consistency."
+  },
+  {
+    question: "Do you require exclusivity?",
+    answer: "Exclusivity depends on the brand and agreement terms. We are flexible and open to discussing mutually beneficial arrangements."
+  },
+  {
+    question: "How do you ensure brand protection on Amazon?",
+    answer: "We follow strict compliance policies, maintain MAP pricing where applicable, and work closely with brands to protect their identity and reputation."
+  },
+  {
+    question: "Can I track my brand's performance?",
+    answer: "Yes, we provide regular reports and insights on sales, performance, and growth."
+  },
+  {
+    question: "What makes you different from other sellers?",
+    answer: "We focus on long-term brand building, authorized partnerships, and data-driven growth strategies rather than short-term reselling."
+  },
+  {
+    question: "Why should I trust you with my brand?",
+    answer: "We have experience managing multiple brands, proven sales performance, and a strong supply chain network that ensures sustainable growth."
+  },
+  {
+    question: "Do you already work with established brands?",
+    answer: "Yes, we currently manage and distribute multiple brands across different categories, with a growing portfolio and proven results."
+  },
+];
 
 export default function aboutus() {
+  // ✅ MOVED useState INSIDE the component function (correct placement)
+  const [copySuccess, setCopySuccess] = useState(false);
+
   return (
     <div className="relative min-h-screen transition-colors text-white font-sans selection:bg-orange-500/30 ">
     
@@ -177,7 +182,7 @@ export default function aboutus() {
           <p className="text-[#949494] text-lg max-w-3xl leading-relaxed">
              I specialize in Amazon and Walmart resale, with a focus on working directly with brands
               to ensure their products are represented the right way. Through hands-on experience across both marketplaces,
-              I’ve built a system centered around clean, optimized listings, consistent pricing, and reliable fulfillment. <br/><br/>
+              I've built a system centered around clean, optimized listings, consistent pricing, and reliable fulfillment. <br/><br/>
           </p>
         </div>
 
@@ -222,7 +227,7 @@ I like to play golf when I find myself with free time on my hands, even though
 
 My wife and I currently live in Binghamton, NY with our two cats Frieza and Gouda. <br/><br/>
 
-At the end of the day, I want Cody’s Commerce, LLC to represent my values and your
+At the end of the day, I want Cody's Commerce, LLC to represent my values and your
  interests mutually. This business is built for long-term growth, strong partnerships,
   and doing things the right way from the start.
             </p>
@@ -297,7 +302,7 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
   </div>
 <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
   <p className="text-white  text-base sm:text-lg md:text-xl lg:text-3xl leading-loose font-extralight tracking-wide ">
-    Partnering with Cody’s Commerce, your definitive all-in-one growth partner.
+    Partnering with Cody's Commerce, your definitive all-in-one growth partner.
     You gain the power of a synchronized team where every strategy from marketing 
     and advertising to daily account management is aligned with your success. 
     We provide a complete service ecosystem designed to position your brand 
@@ -391,25 +396,60 @@ At the end of the day, I want Cody’s Commerce, LLC to represent my values and 
            </div>
          </a>
    
-         <a
-           href="tel:+18457010551"
-           target="_blank"
-           rel="noopener noreferrer"
-           className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
-         >
+        <a
+          href={/iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent) ? "tel:+18457010551" : undefined}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+          onClick={(e) => {
+            const isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+            if (!isMobile) {
+              e.preventDefault();
+              navigator.clipboard.writeText("+1 845-701-0551").then(() => {
+                setCopySuccess(true);
+                setTimeout(() => setCopySuccess(false), 3000);
+              });
+            }
+          }}
+        >
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+          <div className="relative z-10 flex items-center justify-between gap-3 w-full">
+            <div className="flex items-center gap-3">
+              <div className="text-[#FF8D28] text-xl sm:text-2xl">
+                <FiPhoneCall />
+              </div>
+              <span className="text-sm sm:text-base text-gray-300">
+                +1 845-701-0551
+              </span>
+            </div>
+            {/* Copy icon - visible only on desktop */}
+            <div className="hidden lg:flex items-center gap-1 text-gray-400 group-hover:text-[#FF8D28] transition-colors">
+              {copySuccess ? (
+                <>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-[#FF8D28]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-xs text-[#FF8D28] hidden sm:inline">Copied!</span>
+                </>
+              ) : (
+                <>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-xs hidden sm:inline">Copy</span>
+                </>
+              )}
+            </div>
+          </div>
+        </a>
         
-           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
-   
-   
-           <div className="relative z-10 flex items-center gap-3 w-full">
-             <div className="text-[#FF8D28] text-xl sm:text-2xl">
-               <FiPhoneCall />
-             </div>
-             <span className="text-sm sm:text-base text-gray-300">
-               +1 845-701-0551
-             </span>
-           </div>
-         </a>
+        {/* Toast notification for copy success */}
+        {copySuccess && (
+          <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-neutral-900 text-[#FF8D28] border border-[#FF8D28]
+           font-medium px-4 py-2 rounded-lg text-sm z-50 ease-in-out duration-700">
+            Phone number copied to clipboard!
+          </div>
+        )}
    
        </div>
 
