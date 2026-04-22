@@ -285,11 +285,11 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          <div>
-            <p className='text-white tracking-widest text-[10px] sm:text-xs md:text-sm mt-8 sm:mt-10 md:mt-12 lg:mt-16 px-4'>
-              Partner with us today to transform your eCommerce strategy into <br className="hidden sm:block"/> a scalable success story
-            </p>
-          </div>
+         <div className="flex justify-center items-center w-full">
+  <p className='text-white text-center tracking-widest text-[10px] sm:text-xs md:text-sm mt-8 sm:mt-10 md:mt-12 lg:mt-16 px-4'>
+    Partner with us today to transform your eCommerce strategy into <br className="hidden sm:block"/> a scalable success story
+  </p>
+</div>
         </section>
 
         {/* Footer */}
@@ -314,11 +314,18 @@ export default function HomePage() {
               </a>
         
 <a
-  href={/iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent) ? "tel:+18457010551" : undefined}
+  href={(() => {
+    if (typeof window !== 'undefined' && /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+      return "tel:+18457010551";
+    }
+    return undefined;
+  })()}
   target="_blank"
   rel="noopener noreferrer"
   className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
   onClick={(e) => {
+    if (typeof window === 'undefined') return;
+    
     const isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
     if (!isMobile) {
       e.preventDefault();

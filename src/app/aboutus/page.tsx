@@ -364,7 +364,13 @@ At the end of the day, I want Cody's Commerce, LLC to represent my values and yo
       </label>
     ))}
   </div>
+   <div className="flex justify-center items-center w-full">
+  <p className='text-white text-center tracking-widest text-[10px] sm:text-xs md:text-sm mt-8 sm:mt-10 md:mt-12 lg:mt-16 px-4'>
+    Partner with us today to transform your eCommerce strategy into <br className="hidden sm:block"/> a scalable success story
+  </p>
+</div>
 </section>
+
 </div>
 
       
@@ -396,52 +402,59 @@ At the end of the day, I want Cody's Commerce, LLC to represent my values and yo
            </div>
          </a>
    
-        <a
-          href={/iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent) ? "tel:+18457010551" : undefined}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
-          onClick={(e) => {
-            const isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
-            if (!isMobile) {
-              e.preventDefault();
-              navigator.clipboard.writeText("+1 845-701-0551").then(() => {
-                setCopySuccess(true);
-                setTimeout(() => setCopySuccess(false), 3000);
-              });
-            }
-          }}
-        >
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
-          <div className="relative z-10 flex items-center justify-between gap-3 w-full">
-            <div className="flex items-center gap-3">
-              <div className="text-[#FF8D28] text-xl sm:text-2xl">
-                <FiPhoneCall />
-              </div>
-              <span className="text-sm sm:text-base text-gray-300">
-                +1 845-701-0551
-              </span>
-            </div>
-            {/* Copy icon - visible only on desktop */}
-            <div className="hidden lg:flex items-center gap-1 text-gray-400 group-hover:text-[#FF8D28] transition-colors">
-              {copySuccess ? (
-                <>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-[#FF8D28]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-xs text-[#FF8D28] hidden sm:inline">Copied!</span>
-                </>
-              ) : (
-                <>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                  <span className="text-xs hidden sm:inline">Copy</span>
-                </>
-              )}
-            </div>
-          </div>
-        </a>
+       <a
+  href={(() => {
+    if (typeof window !== 'undefined' && /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+      return "tel:+18457010551";
+    }
+    return undefined;
+  })()}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group relative flex items-center gap-3 bg-neutral-900 border border-white/20 p-3 sm:p-4 rounded-xl cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#FF8D28]"
+  onClick={(e) => {
+    if (typeof window === 'undefined') return;
+    
+    const isMobile = /iPhone|iPad|iPod|Android|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+    if (!isMobile) {
+      e.preventDefault();
+      navigator.clipboard.writeText("+1 845-701-0551").then(() => {
+        setCopySuccess(true);
+        setTimeout(() => setCopySuccess(false), 3000);
+      });
+    }
+  }}
+>
+  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 blur-xl bg-gradient-to-r from-[#FF8D28]/20 via-orange-500/10 to-transparent"></div>
+  <div className="relative z-10 flex items-center justify-between gap-3 w-full">
+    <div className="flex items-center gap-3">
+      <div className="text-[#FF8D28] text-xl sm:text-2xl">
+        <FiPhoneCall />
+      </div>
+      <span className="text-sm sm:text-base text-gray-300">
+        +1 845-701-0551
+      </span>
+    </div>
+    {/* Copy icon - visible only on desktop */}
+    <div className="hidden lg:flex items-center gap-1 text-gray-400 group-hover:text-[#FF8D28] transition-colors">
+      {copySuccess ? (
+        <>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5 text-[#FF8D28]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+          <span className="text-xs text-[#FF8D28] hidden sm:inline">Copied!</span>
+        </>
+      ) : (
+        <>
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          <span className="text-xs hidden sm:inline">Copy</span>
+        </>
+      )}
+    </div>
+  </div>
+</a>
         
         {/* Toast notification for copy success */}
         {copySuccess && (
